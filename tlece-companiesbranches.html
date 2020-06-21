@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tlece | Applicants</title>
+  <title>Tlece | Companies and Branches</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,7 +17,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
    
     
-    
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css"> 
   <!-- daterange picker -->
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- iCheck for checkboxes and radio inputs -->
@@ -215,7 +218,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./tlece-applicants.html" class="nav-link active">
+                <a href="./tlece-applicants.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Applicants</p>
                 </a>
@@ -259,7 +262,7 @@
           </li>
             
               <li class="nav-item">
-                <a href="tlece-administrator.html" class="nav-link">
+                <a href="tlece-administrator.html" class="nav-link active">
                     <i class="nav-icon fas fa-th"></i>
                 <p>Administrator</p>
                 </a>
@@ -278,12 +281,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Applicants</h1>
+            <h1>Companies and Branches</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-              <li class="breadcrumb-item active">Applicants</li>
+              <li class="breadcrumb-item active">Companies and Branches</li>
             </ol>
           </div>
         </div>
@@ -295,37 +298,40 @@
 
       <!-- Default box -->
       <div class="card">
-            <!--
               <div class="card-header p-2">
-                
                 <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-default">
-                      <i class="fas fa-user"></i> Add staffs
+                      <i class="fas fa-user"></i> Add company/branch
                     </a>
+                  
+                  
+                  
+              <div class="nav nav-tabs" id="product-tab" role="tablist">
+                <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#companies" role="tab" aria-controls="product-desc" aria-selected="true">Companies</a>
+                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#branches" role="tab" aria-controls="product-comments" aria-selected="false">Branches</a>
               </div>
--->
-          <!-- /.card-header -->
-          
-
-                    
+                  
+              </div><!-- /.card-header -->       
           
         <div class="card-body p-0">
             
-                    
             
-          <table class="table table-striped projects">
+            
+            
+            
+                <div class="tab-content">
+                  <div class="active tab-pane" id="companies">
+                      
+          <table id="companiesbranches" class="table table-striped projects">
               <thead>
                   <tr>
                       <th>
                           Photo
                       </th>
                       <th>
-                            Name
+                        Name
                       </th>
                       <th>
-                          Vacancies/Job Titles
-                      </th>
-                      <th>
-                          Stage
+                          Parent
                       </th>
                       <th class="text-center">
                           Status
@@ -342,24 +348,21 @@
                       </td>
                       <td>
                           <a>
-                              Zhane Ballard
+                              Acme Corporation
                           </a>
                           <br/>
                           <small>
-                              Applied 01.01.2019
+                              Added 01.01.2019
                           </small>
                       </td>
                       <td>
-                          Executive Secretary
-                      </td>
-                      <td>
-                          Stage 1
+                          
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success">Vacancy applied</span>
+                          <span class="badge badge-success">Active</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="./tlece-applicantprofile.html">
+                          <a class="btn btn-primary btn-sm" href="./tlece-companybranchprofile.html">
                               <i class="fas fa-folder">
                               </i>
                               View
@@ -367,53 +370,12 @@
                           <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Process
+                              Edit
                           </a>
-                          <a class="btn btn-default btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
                               </i>
-                              Shortlist
-                          </a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <!-- User image -->
-                  <img class="img-circle img-sm" src="dist/img/user4-128x128.jpg" alt="User Image">
-                      </td>
-                      <td>
-                          <a>
-                              Kerys Driscoll
-                          </a>
-                          <br/>
-                          <small>
-                              Applied 01.01.2019
-                          </small>
-                      </td>
-                      <td>
-                          Production Staff
-                      </td>
-                      <td>
-                          Stage 1
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-warning">Interview invited</span>
-                      </td>
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="./tlece-applicantprofile.html">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
-                          <a class="btn btn-info btn-sm" href="#">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Process
-                          </a>
-                          <a class="btn btn-default btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              Shortlist
+                              Terminate
                           </a>
                       </td>
                   </tr>
@@ -425,24 +387,21 @@
                       </td>
                       <td>
                           <a>
-                              Bentley Enriquez
+                              Acme Technologies, Inc.
                           </a>
                           <br/>
                           <small>
-                              Applied 01.01.2019
+                              Added 01.01.2019
                           </small>
                       </td>
                       <td>
-                          Sales Engineer
-                      </td>
-                      <td>
-                          Stage 2
+                          Acme Corporation
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-danger">Interview scheduled</span>
+                          <span class="badge badge-danger">Terminated</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="./tlece-applicantprofile.html">
+                          <a class="btn btn-primary btn-sm" href="./tlece-companybranchprofile.html">
                               <i class="fas fa-folder">
                               </i>
                               View
@@ -450,17 +409,90 @@
                           <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Process
+                              Edit
                           </a>
                           <a class="btn btn-default btn-sm" href="#" data-toggle="modal" data-target="#modal-default">
                               <i class="fas fa-trash">
                               </i>
-                              Shortlist
+                              Re-invite
                           </a>
                       </td>
                   </tr>
               </tbody>
           </table>
+
+                      
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="active tab-pane" id="branches">
+
+          <table id="companiesbranches" class="table table-striped projects">
+              <thead>
+                  <tr>
+                      <th>
+                          Photo
+                      </th>
+                      <th>
+                            Name
+                      </th>
+                      <th>
+                          Company
+                      </th>
+                      <th class="text-center">
+                          Status
+                      </th>
+                      <th>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <!-- User image -->
+                  <img class="img-circle img-sm" src="dist/img/user4-128x128.jpg" alt="User Image">
+                      </td>
+                      <td>
+                          <a>
+                              Osaka Branch
+                          </a>
+                          <br/>
+                          <small>
+                              Added 01.01.2019
+                          </small>
+                      </td>
+                      <td>
+                          Acme Corporation
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-warning">Invited</span>
+                      </td>
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-sm" href="./tlece-companybranchprofile.html">
+                              <i class="fas fa-folder">
+                              </i>
+                              View
+                          </a>
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Terminate
+                          </a>
+                      </td>
+                  </tr>
+
+              </tbody>
+          </table>
+
+                      
+                  </div>
+                  <!-- /.tab-pane -->
+
+                </div>            
         </div>
         <!-- /.card-body -->
       </div>
@@ -524,7 +556,6 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- Main Footer -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2020 <a href="http://tlece.com">Tlece</a>.</strong>
     All rights reserved.
@@ -545,6 +576,11 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- Select2 -->
 <script src="plugins/select2/js/select2.full.min.js"></script>
 <!-- AdminLTE App -->
@@ -638,6 +674,11 @@
 
     $("input[data-bootstrap-switch]").each(function(){
       $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+      
+    $("#companiesbranches").DataTable({
+      "responsive": true,
+      "autoWidth": false,
     });
 
   })
