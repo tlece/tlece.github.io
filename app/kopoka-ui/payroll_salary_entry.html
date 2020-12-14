@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Salary Entry</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-sitemap"></i><span class="nav-label">Organization</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="#"><span class="nav-label">Workload Analysis</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="workloadanalysis_pic.html">PIC Assignment</a>
+                                    </li>
+                                    <li>
+                                        <a href="workload_calculation.html">Workload Calculation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Person</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="persons.html">Staffs</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="selectionprocess.html">Selection Process</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Individual Development Plan</a></li>
+                            <li><a href="#">Training Plans and Execution</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Individual Career Plan</a></li>
+                            <li><a href="#">Search Talent</a></li>
+                            <li><a href="#">Talent Pool</a></li>
+                            <li><a href="#">Talent Development Program</a></li>
+                            <li><a href="#">Talent Readiness</a></li>
+                            <li><a href="#">Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Remuneration </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="#">Personnel Administration <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="mycalendar.html">My Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Work Shifts</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Benefits</a>
+                                    </li>
+                                    <li><a href="#">Benefits<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="benefitsrequestsandapprovals.html">Requests and Approvals</a>
+                                            </li>
+                                            <li>
+                                                <a href="benefitssummary.html">Summary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Business trips<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="bistripsrequestsandapprovals.html">Requests and Approvals</a>
+                                            </li>
+                                            <li>
+                                                <a href="bistripssummary.html">Summary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Payroll <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="payroll_salary_entry.html">Salary Entry</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_salary_calculation_details.html">Payslip</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka.</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Salary Entry</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a>Remuneration</a>
+                        </li>
+                        <li class="active">
+                            <strong>Salary Entry</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content  animated fadeInRight">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="ibox">
+                            <div class="ibox-content">
+
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group" id="monthpicker">
+                                            <label>
+                                                Select month</label>:
+                                            <div class="input-group date">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input type="text" class="form-control" value="2016">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-7">
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#copyall">Copy all from previous</button>
+                                        <div class="modal" id="copyall">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content animated">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                        <h4 class="modal-title">Copy all</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure to copy all salary data from previous month?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Copy all</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                                <div class="input-group">
+                                    <input type="text" placeholder="Search person " class="input form-control">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+                                </span>
+                                </div>
+
+                                <div class="full-height-scroll">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar"><img alt="image" src="img/a2.jpg"> </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar"><img alt="image" src="img/a3.jpg"> </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Rooney Lindsay<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar"><img alt="image" src="img/a4.jpg"> </td>
+                                                    <td><a data-toggle="tab" href="#contact-3" class="client-link">Lionel Mcmillan<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a5.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-4" class="client-link">Edan Randall<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a6.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Jasper Carson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a7.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-3" class="client-link">Reuben Pacheco</a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a1.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Simon Carson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a3.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Rooney Lindsay<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a4.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-3" class="client-link">Lionel Mcmillan</a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a5.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-4" class="client-link">Edan Randall<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a2.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson</a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a7.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Reuben Pacheco<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a5.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-3" class="client-link">Edan Randall<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a6.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-4" class="client-link">Jasper Carson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a7.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Reuben Pacheco<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a1.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Simon Carson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a3.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-3" class="client-link">Rooney Lindsay<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a4.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-4" class="client-link">Lionel Mcmillan<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"><span class="label label-primary">Entered</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a5.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Edan Randall<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a2.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Anthony Jackson<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>201301010001</td>
+                                                    <td class="client-avatar">
+                                                        <a href=""><img alt="image" src="img/a7.jpg"></a>
+                                                    </td>
+                                                    <td><a data-toggle="tab" href="#contact-4" class="client-link">Reuben Pacheco<br><small>Senior Manager</small></a></td>
+                                                    <td class="client-status"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="ibox ">
+
+                            <div class="ibox-content">
+                                <div class="tab-content">
+                                    <div id="contact-1" class="tab-pane active">
+                                        <div class="row m-b-lg">
+                                            <div class="col-lg-4 text-center">
+                                                <h2>Nicki Smith</h2>
+                                                <div class="m-b-sm">
+                                                    <img alt="image" class="img-circle" src="img/a2.jpg" style="width: 62px">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <label>ID</label>: 201301010001
+                                                <br>
+                                                <label>Job title</label>: Senior Manager
+                                                <br>
+
+                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#copyindividual">Copy from previous</button>
+                                                <div class="modal" id="copyindividual">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content animated">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                <h4 class="modal-title">Copy</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Are you sure to copy from previous month?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-b-lg">
+
+                                            <strong>Wages</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Allowances</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Deductions</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Tax</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Non-taxable Allowances</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Post-tax Deductions</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>BS_W</td>
+                                                            <td>Basic Salary</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <strong>Employer Contributions</strong>
+                                            <div class="table-responsive">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>THR_A</td>
+                                                            <td>Allowances</td>
+                                                            <td>
+                                                                <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+
+                                            <!--
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+-->
+
+                                            <hr/>
+
+
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+
+                                        </div>
+                                    </div>
+                                    <div id="contact-2" class="tab-pane">
+                                        <div class="row m-b-lg">
+                                            <div class="col-lg-4 text-center">
+                                                <h2>Edan Randall</h2>
+
+                                                <div class="m-b-sm">
+                                                    <img alt="image" class="img-circle" src="img/a3.jpg" style="width: 62px">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <label>ID</label>: 201301010001
+                                                <br>
+                                                <label>Job title</label>: Senior Manager
+                                                <br>
+
+                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newscorerule">Copy from previous</button>
+                                                <div class="modal" id="newscorerule">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content animated">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                <i class="fa fa-laptop modal-icon"></i>
+                                                                <h4 class="modal-title">New score rule</h4>
+                                                                <small class="font-bold">Please enter info for new score rule.</small>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">No.: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Condition: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Score: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Description: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Wages</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Tax</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Non-taxable Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Post-tax Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Employer Contributions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <!--
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+-->
+
+                                                <hr/>
+
+
+                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="contact-3" class="tab-pane">
+                                        <div class="row m-b-lg">
+                                            <div class="col-lg-4 text-center">
+                                                <h2>Jasper Carson</h2>
+
+                                                <div class="m-b-sm">
+                                                    <img alt="image" class="img-circle" src="img/a4.jpg" style="width: 62px">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <label>ID</label>: 201301010001
+                                                <br>
+                                                <label>Job title</label>: Senior Manager
+                                                <br>
+
+                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newscorerule">Copy from previous</button>
+                                                <div class="modal" id="newscorerule">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content animated">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                <i class="fa fa-laptop modal-icon"></i>
+                                                                <h4 class="modal-title">New score rule</h4>
+                                                                <small class="font-bold">Please enter info for new score rule.</small>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">No.: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Condition: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Score: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Description: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Wages</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Tax</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Non-taxable Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Post-tax Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Employer Contributions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <!--
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+-->
+
+                                                <hr/>
+
+
+                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="contact-4" class="tab-pane">
+                                        <div class="row m-b-lg">
+                                            <div class="col-lg-4 text-center">
+                                                <h2>Reuben Pacheco</h2>
+
+                                                <div class="m-b-sm">
+                                                    <img alt="image" class="img-circle" src="img/a5.jpg" style="width: 62px">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <label>ID</label>: 201301010001
+                                                <br>
+                                                <label>Job title</label>: Senior Manager
+                                                <br>
+
+                                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newscorerule">Copy from previous</button>
+                                                <div class="modal" id="newscorerule">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content animated">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                <i class="fa fa-laptop modal-icon"></i>
+                                                                <h4 class="modal-title">New score rule</h4>
+                                                                <small class="font-bold">Please enter info for new score rule.</small>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-2 control-label">No.: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Condition: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Score: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                    <label class="col-sm-2 control-label">Description: </label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Wages</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Tax</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Non-taxable Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Post-tax Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Employer Contributions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <!--
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+-->
+
+                                                <hr/>
+
+
+                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="company-1" class="tab-pane">
+                                        <div class="m-b-lg">
+                                            <h2>Tellus Institute</h2>
+
+                                            <p>
+                                                Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,written in 45 BC. This book is a treatise on.
+                                            </p>
+                                            <div>
+                                                <small>Active project completion with: 48%</small>
+                                                <div class="progress progress-mini">
+                                                    <div style="width: 48%;" class="progress-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Wages</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Tax</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Non-taxable Allowances</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Post-tax Deductions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>BS_W</td>
+                                                                <td>Basic Salary</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <strong>Employer Contributions</strong>
+                                                <div class="table-responsive">
+                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>THR_A</td>
+                                                                <td>Allowances</td>
+                                                                <td>
+                                                                    <input type="text" id="product_name" name="product_name" value="" placeholder="Enter amount" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="hr-line-dashed"></div>
+
+                                                <!--
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+-->
+
+                                                <hr/>
+
+
+                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="company-2" class="tab-pane">
+                                        <div class="m-b-lg">
+                                            <h2>Penatibus Consulting</h2>
+
+                                            <p>
+                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some.
+                                            </p>
+                                            <div>
+                                                <small>Active project completion with: 22%</small>
+                                                <div class="progress progress-mini">
+                                                    <div style="width: 22%;" class="progress-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Last activity</strong>
+
+                                                <ul class="list-group clear-list">
+                                                    <li class="list-group-item fist-item">
+                                                        <span class="pull-right"> <span class="label label-warning">WAITING</span> </span>
+                                                        Aldus PageMaker
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="pull-right"><span class="label label-primary">NEW</span> </span>
+                                                        Lorem Ipsum, you need to be sure
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="pull-right"> <span class="label label-danger">BLOCKED</span> </span>
+                                                        The generated Lorem Ipsum
+                                                    </li>
+                                                </ul>
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                                </p>
+                                                <hr/>
+                                                <strong>Timeline activity</strong>
+                                                <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-coffee"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Conference on the sales results for the previous year.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Many desktop publishing packages and web page editors now use Lorem.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>There are many variations of passages of Lorem Ipsum available.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon navy-bg">
+                                                            <i class="fa fa-warning"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>The generated Lorem Ipsum is therefore.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-coffee"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Conference on the sales results for the previous year.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Many desktop publishing packages and web page editors now use Lorem.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="company-3" class="tab-pane">
+                                        <div class="m-b-lg">
+                                            <h2>Ultrices Incorporated</h2>
+
+                                            <p>
+                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.
+                                            </p>
+                                            <div>
+                                                <small>Active project completion with: 72%</small>
+                                                <div class="progress progress-mini">
+                                                    <div style="width: 72%;" class="progress-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="client-detail">
+                                            <div class="full-height-scroll">
+
+                                                <strong>Last activity</strong>
+
+                                                <ul class="list-group clear-list">
+                                                    <li class="list-group-item fist-item">
+                                                        <span class="pull-right"> <span class="label label-danger">BLOCKED</span> </span>
+                                                        Hidden in the middle of text
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="pull-right"><span class="label label-primary">NEW</span> </span>
+                                                        Non-characteristic words etc.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span class="pull-right">  <span class="label label-warning">WAITING</span> </span>
+                                                        Bonorum et Malorum
+                                                    </li>
+                                                </ul>
+                                                <strong>Notes</strong>
+                                                <p>
+                                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                                                </p>
+                                                <hr/>
+                                                <strong>Timeline activity</strong>
+                                                <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Many desktop publishing packages and web page editors now use Lorem.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>There are many variations of passages of Lorem Ipsum available.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon navy-bg">
+                                                            <i class="fa fa-warning"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>The generated Lorem Ipsum is therefore.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-coffee"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Conference on the sales results for the previous year.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vertical-timeline-block">
+                                                        <div class="vertical-timeline-icon gray-bg">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <div class="vertical-timeline-content">
+                                                            <p>Many desktop publishing packages and web page editors now use Lorem.
+                                                            </p>
+                                                            <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('#monthpicker .input-group.date').datepicker({
+                format: 'mm/yyyy',
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true,
+                viewMode: "months",
+                minViewMode: "months"
+            });
+
+        });
+
+        $('.chosen-select').chosen({
+            width: "100%"
+        });
+    </script>
+
+</body>
+
+</html>

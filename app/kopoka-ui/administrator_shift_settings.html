@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Career Settings</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">Arnold Siboro</strong>
+                                    </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-diamond"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Organisation</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li>
+                                <a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li>
+                                <a href="#"><span class="nav-label">Workload Analysis</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="workloadanalysis_pic.html">PIC Assignment</a>
+                                    </li>
+                                    <li>
+                                        <a href="workload_calculation.html">Workload Calculation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">Person</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="persons.html">Staffs</a></li>
+                            <li><a href="#">Applicants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Manpower Planning</a></li>
+                            <li><a href="#">Recruitment Planning</a></li>
+                            <li><a href="#">Selection Process</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flask"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="graph_flot.html"><span class="nav-label">Indicators<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_kpi_view.html">KPIs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">OKRs</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_bsc.html">BSCs</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning.html">Result Targets (KPI)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Process Targets (Competency)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="#">Evidence</a></li>
+                            <li>
+                                <a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Periodical Evaluation - Result Targets (KPI)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Final Evaluation - Result Targets (KPI)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Final Evaluation - Process Targets (Competency)</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Individual Development Plan</a></li>
+                            <li><a href="#">Training Plans and Execution</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Individual Career Plan</a></li>
+                            <li><a href="#">Search Talent</a></li>
+                            <li><a href="#">Talent Pool</a></li>
+                            <li><a href="#">Talent Development Program</a></li>
+                            <li><a href="#">Talent Readiness</a></li>
+                            <li><a href="#">Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Remuneration </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="#">Personnel Administration <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="mycalendar.html">My Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Work Shifts</a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                                                    <a href="#">Leaves</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Overtimes</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Attendances</a>
+                                                                </li>
+                                    -->
+                                    <li>
+                                        <a href="#">Benefits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Business Trips</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Payroll <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Salary Entry</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tax Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Overtime Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Salary Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Payslip</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-diamond"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-diamond"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-diamond"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Shift Settings</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a><a href="administrator.html">Administrator</a>
+                        </li>
+                        <li class="active">
+                            <strong>Shift Settings</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Various General Settings</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="tabs-container">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#tab-1">Define Shift</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab-2">Assign Shift</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab-1" class="tab-pane active">
+                                            <div class="panel-body">
+                                                <div class="wrapper wrapper-content animated fadeInRight ecommerce">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="form-group">
+                                                                <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#dimension_new">Filter</button>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#dimension_new">Add New</button>
+                                                            </div>
+                                                            <!-- Modal -->
+                                                            <div class="modal inmodal" id="dimension_new" tabindex="-1" role="dialog" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content animated bounceInRight">
+                                                                        <div class="modal-header">
+                                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                            <i class="fa fa-eye modal-icon"></i>
+                                                                            <h4 class="modal-title">Please input Shift</h4>
+                                                                            <small class="font-bold">Shift use for get start and end of working time</small>
+                                                                            <label class="text-navy">Shift Of (Company Name)</label>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="status">Label</label>
+                                                                                        <input type="text" id="status" name="status" value="" placeholder="Label" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="date_modified">Start Time</label>
+                                                                                        <div class="input-group date">
+                                                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                            <input id="date_modified" type="text" class="form-control" value="03/06/2014">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="date_modified">End Time</label>
+                                                                                        <div class="input-group date">
+                                                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                            <input id="date_modified" type="text" class="form-control" value="03/06/2014">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="date_modified">Start Break Time</label>
+                                                                                        <div class="input-group date">
+                                                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                            <input id="date_modified" type="text" class="form-control" value="03/06/2014">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="date_modified">End Break Time</label>
+                                                                                        <div class="input-group date">
+                                                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                            <input id="date_modified" type="text" class="form-control" value="03/06/2014">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="amount">Status</label>
+                                                                                        <div class="radio">
+                                                                                            <label>
+                                                                                                <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> Active
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="radio">
+                                                                                            <label>
+                                                                                                <input type="radio" checked="" value="option2" id="optionsRadios2" name="optionsRadios"> Not Active
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                    <div class="form-group">
+                                                                                        <label class="control-label" for="customer">Description</label>
+                                                                                        <textarea class="col-sm-8 form-control" rows="5"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                            <button type="button" class="btn btn-primary showtoast" data-dismiss="modal">Save changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ibox">
+                                                            <div class="ibox-content">
+                                                                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Label</th>
+                                                                            <th>Start Time</th>
+                                                                            <th>End Time</th>
+                                                                            <th>Start Break Time</th>
+                                                                            <th>End Break Time</th>
+                                                                            <th>Description</th>
+                                                                            <th>Status</th>
+                                                                            <th class="text-right">Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Standart Shift
+                                                                            </td>
+                                                                            <td>
+                                                                                08.00
+                                                                            </td>
+                                                                            <td>
+                                                                                17.00
+                                                                            </td>
+                                                                            <td>
+                                                                                12.00
+                                                                            </td>
+                                                                            <td>
+                                                                                13.00
+                                                                            </td>
+                                                                            <td>
+                                                                                Standart shift for all employee
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="label label-primary">Active</span>
+                                                                            </td>
+                                                                            <td class="text-right">
+                                                                                <div class="btn-group">
+                                                                                    <button class="btn-white btn btn-xs">Edit</button>
+                                                                                    <button class="btn-white btn btn-xs">Delete</button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Morning Shift AB
+                                                                            </td>
+                                                                            <td>
+                                                                                05.00
+                                                                            </td>
+                                                                            <td>
+                                                                                12.00
+                                                                            </td>
+                                                                            <td>
+                                                                                09.00
+                                                                            </td>
+                                                                            <td>
+                                                                                10.00
+                                                                            </td>
+                                                                            <td>
+                                                                                Morning shift for employee AB
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="label label-primary">Active</span>
+                                                                            </td>
+                                                                            <td class="text-right">
+                                                                                <div class="btn-group">
+                                                                                    <button class="btn-white btn btn-xs">Edit</button>
+                                                                                    <button class="btn-white btn btn-xs">Delete</button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab-2" class="tab-pane">
+                                            <div class="panel-body">
+                                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th data-toggle="true">Name</th>
+                                                            <th>Job Title</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span>1.</span><span><input type="checkbox" /></span></td>
+                                                            <td>Nama Pegawai 1</td>
+                                                            <td class="netis_tooltip">
+                                                                Marketing Staff
+                                                                <span class="tooltiptext">
+                                                                    Direktorat : HR<br />
+                                                                    Departement : Makreting
+                                                                    Staff : Makreting
+                                                                </span>
+                                                            </td>
+                                                            <td><a class="btn btn-primary btn-xs" href="">Assign Shift</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="8">
+                                                                <ul class="pagination pull-right"></ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    {
+                        extend: 'copy'
+                    },
+                    {
+                        extend: 'csv'
+                    },
+                    {
+                        extend: 'excel',
+                        title: 'ExampleFile'
+                    },
+                    {
+                        extend: 'pdf',
+                        title: 'ExampleFile'
+                    },
+
+                    {
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                        }
+                    }
+                ]
+
+            });
+
+        });
+    </script>
+    <script src="js/w3data.js"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+</body>
+
+</html>

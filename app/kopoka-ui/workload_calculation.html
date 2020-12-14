@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Workload Calculation</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+
+    <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+
+    <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- X-editable CDN styles -->
+    <link href="css/bootstrap-editable.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+                                                <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="myprofile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="workload_analysis.html">Workload Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">People</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+
+                            <li><a href="persons_staffs.html">Staffs</a></li>
+                            <li><a href="persons_applicants.html">Applicants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="recruitment_manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitment_recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="recruitment_selectionprocess.html">Selection Process</a></li>
+                            <li><a href="recruitment_jobvacancies.html">Job Vacancies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="training_list.html">Training List</a></li>
+                            <li><a href="training_mytrainings.html">My Trainings</a></li>
+                            <li>
+                                <a href="training_administration_events.html">Training Events</a>
+                            </li>
+                            <!--<li>
+                                <a href="training_administration_elearning.html">E-learning</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="career_individualcareerplan.html">Individual Career Plan</a></li>
+                            <li><a href="career_searchtalent.html">Search Talent</a></li>
+                            <li><a href="career_talentpool.html">Talent Pool</a></li>
+                            <li><a href="career_talentdevelopementprogram.html">Talent Development Program</a></li>
+                            <li><a href="career_transfer.html">Direct Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-open"></i><span class="nav-label">Personnel </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="mycalendar.html">My Calendar</a>
+                            </li>
+                            <li>
+                                <a href="workflow.html">Workflows</a>
+                            </li>
+                            <li>
+                                <a href="workshiftassignment.html">Work Shifts</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpense.html">Medical Expense</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpenseadministration.html">Medical Expense Administration</a>
+                            </li>
+                            <li>
+                                <a href="bistripsexpense.html">Business Trip</a>
+                            </li>
+                            <li>
+                                <a href="attendance.html">Attendance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Payroll </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="payroll_salary_entry.html">Salary Entry</a>
+                            </li>
+                            <li>
+                                <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_payslips.html">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Workload Calculation</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a>Job</a>
+                        </li>
+                        <li class="active">
+                            <strong>Workload Calculation</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+
+                <div class="row">
+                        <div class="ibox">
+                            <div class="ibox-content">
+                                
+                                <div class="form-group">
+                                    <label class="control-label" for="status">Workloads calculated: </label> 10 out of 15 titles in this branch
+                                    <br><label class="control-label" for="status">FTE: </label> 113.5 hours
+                                    <br><label class="control-label" for="status">Total FTE in this branch: </label> 42.5 FTEs
+                                </div>
+                                
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group">
+                                    <!-- Show the job titles assigned to logged in user -->
+                                    <!-- When logged in user has HR Admin privilege, show all job titles -->
+                                    <div>
+                                        <label class="control-label" for="status">Select a job title: </label>
+                                        <select data-placeholder="Choose a job title..." class="chosen-select" tabindex="2">
+                                            <option value="1">DIR-BR Director of Business Development - Tono Kartono</option>
+                                            <option selected value="2">DIR-FIN Director of Finance - Jono Karjono</option>
+                                            <option value="3">DIR-HR Director of HR - Sono Karsono</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+<!-- Fill out the following table according to the job title selected above -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Activity</th>
+                                            <th>Role</th>
+                                            <th>Routine</th>
+                                            <th>Trigger factor</th> <!-- this is for non-routine activity only; set to N/A for routine activity -->
+                                            <th>Cycle</th><!-- day/week/month/year; pre-set to year for non-routine activity -->
+                                            <th>Frequency per cycle</th>
+                                            <th>Hour(s) per occurence</th>
+                                            <th>Hour(s) per year</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lorem Ipsum</td>
+                                            <td>R</td>
+                                            <td>
+                                                <div class="switch">
+                                                    <div class="onoffswitch">
+                                                        <input type="checkbox" checked class="onoffswitch-checkbox" id="example1">
+                                                        <label class="onoffswitch-label" for="example1">
+                                                            <span class="onoffswitch-inner"></span>
+                                                            <span class="onoffswitch-switch"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>N/A</td>
+                                            <td>
+                                                <a href="#" id="yesno" data-type="select" data-pk="1" data-value="" data-title="Select 0 or 1" class="editable editable-click" style="color: gray;">not selected</a>
+                                            </td>
+                                            <td>
+                                            <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>
+                                                <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>XX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1.1</td>
+                                            <td>Ipsum Lorem</td>
+                                            <td>A</td>
+                                            <td>
+                                            <div class="switch">
+                                                    <div class="onoffswitch">
+                                                        <input type="checkbox" checked class="onoffswitch-checkbox" id="example1">
+                                                        <label class="onoffswitch-label" for="example1">
+                                                            <span class="onoffswitch-inner"></span>
+                                                            <span class="onoffswitch-switch"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>N/A</td>
+                                            <td>
+                                            <a href="#" id="yesno" data-type="select" data-pk="1" data-value="" data-title="Select 0 or 1" class="editable editable-click" style="color: gray;">not selected</a>
+                                            </td>
+                                            <td>
+                                            <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>
+                                                <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>YY</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Lorem Ipsum</td>
+                                            <td>I</td>
+                                            <td>
+                                            <div class="switch">
+                                                    <div class="onoffswitch">
+                                                        <input type="checkbox" checked class="onoffswitch-checkbox" id="example1">
+                                                        <label class="onoffswitch-label" for="example1">
+                                                            <span class="onoffswitch-inner"></span>
+                                                            <span class="onoffswitch-switch"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Blah blah</td>
+                                            <td>
+                                            <a href="#" id="yesno" data-type="select" data-pk="1" data-value="" data-title="Select 0 or 1" class="editable editable-click" style="color: gray;">not selected</a>
+                                            </td>
+                                            <td>
+                                            <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>
+                                                <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter boss' name" class="editable editable-click"></a>
+                                            </td>
+                                            <td>ZZ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <strong>Summary for this job title</strong>
+                                        <ul class="list-group clear-list">
+                                            <li class="list-group-item">
+                                                <span class="pull-right"> 21,600 hours </span>
+                                                Total hours for routine activities
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="pull-right"> 10,000 hours </span>
+                                                Total hours for non-routine activities
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="pull-right"> 31,600 hours </span>
+                                                Total hours for all activities
+                                            </li>
+                                            <li class="list-group-item fist-item">
+                                                <span class="pull-right"> 2.5 FTEs </span> 
+                                                FTE of this job title
+                                            </li>
+                                            <li class="list-group-item fist-item">
+                                                <span class="pull-right"> 3 persons </span> 
+                                                Total staffs Required
+                                            </li>
+                                        </ul>
+                                
+                                
+                                                                    <div class="m-t-lg">
+                                        <p>
+                                            <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+                                            <a href="#">Download all</a>
+                                            |
+                                            <a href="#">View all images</a>
+                                                                        
+                                                                        
+                                                                        
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newindicator">Upload evidence</button>
+                                        <div class="modal fade" id="newindicator" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <h3>New Evidence</h3>
+
+                                                            <p>Please enter information for new evidence</p>
+
+                                                            <form role="form">
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <label class="col-sm-3 control-label">Description: </label>
+                                                                        <div class="col-sm-9">
+                                                                            <input type="text" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <label class="col-sm-12 control-label">Evidence file: </label>
+                                                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                                                            <div class="form-control col-sm-4" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                                                                            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span>
+                                                                            <input type="file" name="...">
+                                                                            </span>
+                                                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!--
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                </div>
+                                                                -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                        </p>
+
+                                        <div class="attachment">
+                                            <div class="file-box">
+                                                <div class="file">
+                                                    <a href="#">
+                                                        <span class="corner"></span>
+
+                                                        <div class="icon">
+                                                            <i class="fa fa-file"></i>
+                                                        </div>
+                                                        <div class="file-name">
+                                                            Document_2014.doc
+                                                            <br>
+                                                            <small>Added: Jan 11, 2014</small>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="file-box">
+                                                <div class="file">
+                                                    <a href="#">
+                                                        <span class="corner"></span>
+
+                                                        <div class="icon">
+                                                            <i class="fa fa-line-chart"></i>
+                                                        </div>
+                                                        <div class="file-name">
+                                                            Seels_2015.xls
+                                                            <br>
+                                                            <small>Added: May 13, 2015</small>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                
+                                
+                                
+                            </div>    
+                        </div>
+                </div>
+
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- X-editable CDN styles -->
+    <script src="js/bootstrap-editable.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+    <!-- JSKnob -->
+    <script src="js/plugins/jsKnob/jquery.knob.js"></script>
+
+    <!-- Input Mask-->
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- NouSlider -->
+    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+
+    <!-- IonRangeSlider -->
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- MENU -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Color picker -->
+    <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+
+    <!-- Image cropper -->
+    <script src="js/plugins/cropper/cropper.min.js"></script>
+
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+    <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Select2 -->
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+
+    <!-- TouchSpin -->
+    <script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+
+    <!-- Tags Input -->
+    <script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+    <!-- Dual Listbox -->
+    <script src="js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.tagsinput').tagsinput({
+                tagClass: 'label label-primary'
+            });
+
+            var $image = $(".image-crop > img")
+            $($image).cropper({
+                aspectRatio: 1.618,
+                preview: ".img-preview",
+                done: function (data) {
+                    // Output the result data for cropping image.
+                }
+            });
+
+            var $inputImage = $("#inputImage");
+            if (window.FileReader) {
+                $inputImage.change(function () {
+                    var fileReader = new FileReader(),
+                        files = this.files,
+                        file;
+
+                    if (!files.length) {
+                        return;
+                    }
+
+                    file = files[0];
+
+                    if (/^image\/\w+$/.test(file.type)) {
+                        fileReader.readAsDataURL(file);
+                        fileReader.onload = function () {
+                            $inputImage.val("");
+                            $image.cropper("reset", true).cropper("replace", this.result);
+                        };
+                    } else {
+                        showMessage("Please choose an image file.");
+                    }
+                });
+            } else {
+                $inputImage.addClass("hide");
+            }
+
+            $("#download").click(function () {
+                window.open($image.cropper("getDataURL"));
+            });
+
+            $("#zoomIn").click(function () {
+                $image.cropper("zoom", 0.1);
+            });
+
+            $("#zoomOut").click(function () {
+                $image.cropper("zoom", -0.1);
+            });
+
+            $("#rotateLeft").click(function () {
+                $image.cropper("rotate", 45);
+            });
+
+            $("#rotateRight").click(function () {
+                $image.cropper("rotate", -45);
+            });
+
+            $("#setDrag").click(function () {
+                $image.cropper("setDragMode", "crop");
+            });
+
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            $('#data_2 .input-group.date').datepicker({
+                startView: 1,
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                format: "dd/mm/yyyy"
+            });
+
+            $('#data_3 .input-group.date').datepicker({
+                startView: 2,
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+
+            $('#data_4 .input-group.date').datepicker({
+                minViewMode: 1,
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                todayHighlight: true
+            });
+
+            $('#data_5 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+
+            var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, {
+                color: '#1AB394'
+            });
+
+            var elem_2 = document.querySelector('.js-switch_2');
+            var switchery_2 = new Switchery(elem_2, {
+                color: '#ED5565'
+            });
+
+            var elem_3 = document.querySelector('.js-switch_3');
+            var switchery_3 = new Switchery(elem_3, {
+                color: '#1AB394'
+            });
+
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
+            });
+
+            $('.demo1').colorpicker();
+
+            var divStyle = $('.back-change')[0].style;
+            $('#demo_apidemo').colorpicker({
+                color: divStyle.backgroundColor
+            }).on('changeColor', function (ev) {
+                divStyle.backgroundColor = ev.color.toHex();
+            });
+
+            $('.clockpicker').clockpicker();
+
+            $('input[name="daterange"]').daterangepicker();
+
+            $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+            $('#reportrange').daterangepicker({
+                format: 'MM/DD/YYYY',
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2015',
+                dateLimit: {
+                    days: 60
+                },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                opens: 'right',
+                drops: 'down',
+                buttonClasses: ['btn', 'btn-sm'],
+                applyClass: 'btn-primary',
+                cancelClass: 'btn-default',
+                separator: ' to ',
+                locale: {
+                    applyLabel: 'Submit',
+                    cancelLabel: 'Cancel',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: 'Custom',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    firstDay: 1
+                }
+            }, function (start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            });
+
+            $(".select2_demo_1").select2();
+            $(".select2_demo_2").select2();
+            $(".select2_demo_3").select2({
+                placeholder: "Select a state",
+                allowClear: true
+            });
+
+
+            $(".touchspin1").TouchSpin({
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
+
+            $(".touchspin2").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: '%',
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
+
+            $(".touchspin3").TouchSpin({
+                verticalbuttons: true,
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white'
+            });
+
+            $('.dual_select').bootstrapDualListbox({
+                selectorMinimalHeight: 160
+            });
+
+
+        });
+
+        $('.chosen-select').chosen({
+            width: "100%"
+        });
+
+        $("#ionrange_1").ionRangeSlider({
+            min: 0,
+            max: 5000,
+            type: 'double',
+            prefix: "$",
+            maxPostfix: "+",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_2").ionRangeSlider({
+            min: 0,
+            max: 10,
+            type: 'single',
+            step: 0.1,
+            postfix: " carats",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_3").ionRangeSlider({
+            min: -50,
+            max: 50,
+            from: 0,
+            postfix: "°",
+            prettify: false,
+            hasGrid: true
+        });
+
+        $("#ionrange_4").ionRangeSlider({
+            values: [
+                "January", "February", "March",
+                "April", "May", "June",
+                "July", "August", "September",
+                "October", "November", "December"
+            ],
+            type: 'single',
+            hasGrid: true
+        });
+
+        $("#ionrange_5").ionRangeSlider({
+            min: 10000,
+            max: 100000,
+            step: 100,
+            postfix: " km",
+            from: 55000,
+            hideMinMax: true,
+            hideFromTo: false
+        });
+
+        $(".dial").knob();
+
+        var basic_slider = document.getElementById('basic_slider');
+
+        noUiSlider.create(basic_slider, {
+            start: 40,
+            behaviour: 'tap',
+            connect: 'upper',
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+
+        var range_slider = document.getElementById('range_slider');
+
+        noUiSlider.create(range_slider, {
+            start: [40, 60],
+            behaviour: 'drag',
+            connect: true,
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+
+        var drag_fixed = document.getElementById('drag-fixed');
+
+        noUiSlider.create(drag_fixed, {
+            start: [40, 60],
+            behaviour: 'drag-fixed',
+            connect: true,
+            range: {
+                'min': 20,
+                'max': 80
+            }
+        });
+    </script>
+    
+        <-- X-Editable scripts --></-->
+    <script>
+        $(function () {
+
+
+            //turn to inline mode
+            $.fn.editable.defaults.mode = 'inline';
+
+            //defaults
+            $.fn.editable.defaults.url = '#';
+
+            //editables
+            $('#username').editable({
+                url: '#',
+                type: 'text',
+                pk: 1,
+                name: 'username',
+                title: 'Enter username'
+            });
+
+            $('#firstname').editable({
+                validate: function (value) {
+                    if ($.trim(value) == '') return 'This field is required';
+                }
+            });
+
+            $('#yesno').editable({
+                prepend: "not selected",
+                source: [
+                    {
+                        value: 0,
+                        text: 'Monthly'
+                    },
+                    {
+                        value: 1,
+                        text: 'Quarterly'
+                    },
+                    {
+                        value: 2,
+                        text: 'Half-yearly'
+                    },
+                    {
+                        value: 3,
+                        text: 'Yearly'
+                    }
+                ],
+                display: function (value, sourceData) {
+                    var colors = {
+                            "": "gray",
+                            1: "green",
+                            2: "blue"
+                        },
+                        elem = $.grep(sourceData, function (o) {
+                            return o.value == value;
+                        });
+
+                    if (elem.length) {
+                        $(this).text(elem[0].text).css("color", colors[value]);
+                    } else {
+                        $(this).empty();
+                    }
+                }
+            });
+
+            $('#dob').editable();
+
+            $('#event').editable({
+                placement: 'right',
+                combodate: {
+                    firstItem: 'name'
+                }
+            });
+
+            $('#comments').editable({
+                showbuttons: 'bottom'
+            });
+
+            $('#fruits').editable({
+                pk: 1,
+                limit: 3,
+                source: [
+                    {
+                        value: 1,
+                        text: 'banana'
+                    },
+                    {
+                        value: 2,
+                        text: 'peach'
+                    },
+                    {
+                        value: 3,
+                        text: 'apple'
+                    },
+                    {
+                        value: 4,
+                        text: 'watermelon'
+                    },
+                    {
+                        value: 5,
+                        text: 'orange'
+                    }
+                ]
+            });
+
+            $('#user .editable').on('hidden', function (e, reason) {
+                if (reason === 'save' || reason === 'nochange') {
+                    var $next = $(this).closest('tr').next().find('.editable');
+                    if ($('#autoopen').is(':checked')) {
+                        setTimeout(function () {
+                            $next.editable('show');
+                        }, 300);
+                    } else {
+                        $next.focus();
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

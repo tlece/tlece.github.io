@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Notifications</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-sitemap"></i><span class="nav-label">Organization</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="workload_analysis.html">Workload Analysis</a></li>
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Person</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="persons.html">Staffs</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="selectionprocess.html">Selection Process</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Individual Development Plan</a></li>
+                            <li><a href="#">Training Plans and Execution</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#">Individual Career Plan</a></li>
+                            <li><a href="#">Search Talent</a></li>
+                            <li><a href="#">Talent Pool</a></li>
+                            <li><a href="#">Talent Development Program</a></li>
+                            <li><a href="#">Talent Readiness</a></li>
+                            <li><a href="#">Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Remuneration </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="#">Personnel Administration <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="mycalendar.html">My Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Work Shifts <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="workshiftassignment.html">Work Shift Assignment</a>
+                                            </li>
+                                            <li>
+                                                <a href="workshiftsummary.html">Work Shift Summary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Benefits<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="medicalexpense.html">Medical Expense</a>
+                                            </li>
+                                            <li>
+                                                <a href="medicalexpenseadministration.html">Medical Expense Administration</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Business trips<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-fourth-level">
+                                            <li>
+                                                <a href="bistripsexpense.html">Expense</a>
+                                            </li>
+                                            <li>
+                                                <a href="bistripsexpensesummary.html">Expense Summary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Payroll <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="payroll_salary_entry.html">Salary Entry</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                                    </li>
+                                    <li>
+                                        <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Notifications</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <strong>Notifications</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="ibox float-e-margins">
+
+                    <div class="ibox-content">
+                        <form method="get" action="index.html" class="pull-right mail-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" name="search" placeholder="Search notifications">
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                                <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+
+                            </div>
+                            <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button>
+                            <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
+                            <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </button>
+
+                        </div>
+
+
+                        <div>
+
+                            <table class="table table-hover table-mail">
+                                <thead>
+                                    <td>
+                                        <input type="checkbox" class="i-checks">
+                                    </td>
+                                    <td>Type</td>
+                                    <td>Content</td>
+                                    <td>Date/time</td>
+                                </thead>
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">Remuneration
+                                        </td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">Lorem ipsum dolor noretek imit set.<br><small>In placerat hendrerit dui vitae imperdiet. Vivamus lacinia tortor sit amet interdum pretium. </small></a>
+
+                                            <div class="modal" id="notification1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content animated">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h4 class="modal-title">Lorem ipsum dolor noretek imit set.</h4>
+                                                            <small class="font-bold">6:10 AM</small>
+                                                        </div>
+                                                        <div class="modal-body full-height-scroll">
+                                                            In placerat hendrerit dui vitae imperdiet. Vivamus lacinia tortor sit amet interdum pretium. Vestibulum volutpat lobortis ornare. Donec a posuere ligula, ac aliquet mi. Ut in fringilla felis. Suspendisse venenatis nibh at varius elementum. Proin eget euismod lacus, vel varius turpis. Proin in viverra ex, sed scelerisque velit. Nulla tincidunt imperdiet mi, at congue elit vulputate id. Donec nibh eros, sodales eu nibh porttitor, semper dictum felis. Praesent dignissim vitae sapien nec bibendum. Morbi ut lobortis ex, sed gravida nisi. Etiam pretium dictum scelerisque. In gravida nunc quis purus rutrum tincidunt. Duis pharetra dignissim ex scelerisque lobortis.
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td class="text-right">6.10 AM</td>
+                                    </tr>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks" checked>
+                                        </td>
+                                        <td class="mail-ontact">Performance</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">Aldus PageMaker including versions of Lorem Ipsum.
+                                            <br><small>Nunc ultricies dui at tortor mollis, nec maximus dolor ultricies. Phasellus in metus vehicula, dignissim erat at, maximus risus.</small></a>
+                                        </td>
+                                        <td class="text-right">8.22 PM</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">Remuneration</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">Many desktop publishing packages and web page editors.
+                                            <br><small>Curabitur tristique odio quis volutpat pharetra. Duis dignissim viverra lectus, sollicitudin aliquam leo vestibulum quis. Donec et quam orci. </small></a>
+                                        </td>
+                                        <td class="text-right">Jan 16</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">Job</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">There are many variations of passages of Lorem Ipsum.
+                                            <br><small> Proin fringilla tortor sit amet felis fringilla porttitor. Duis at sollicitudin nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </small></a>
+                                        </td>
+                                        <td class="text-right">Mar 22</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">Performance</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">Lorem ipsum dolor noretek imit set.
+                                            <br><small>Donec interdum, est et tempus aliquam, risus elit ullamcorper dui, vitae porta justo tellus vel risus. Nunc ligula erat, dignissim sed tristique id.</small></a>
+                                        </td>
+                                        <td class="text-right">December 22</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">General</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">The standard chunk of Lorem Ipsum used.
+                                            <br><small>Proin posuere, nisi at consequat consequat, magna turpis sodales turpis, et placerat lorem lorem eu est.</small></a>
+                                        </td>
+                                        <td class="text-right">Jun 12</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">Remuneration</td>
+                                        <td class="mail-subject"><a href="#" data-toggle="modal" data-target="#notification1">Contrary to popular belief.
+                                            <br><small>Aliquam fermentum, libero pellentesque cursus dapibus, ipsum nulla finibus nunc, non aliquam neque ligula quis velit. Sed feugiat facilisis magna porttitor feugiat. </small></a>
+                                        </td>
+                                        <td class="text-right">May 28</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</body>
+
+</html>

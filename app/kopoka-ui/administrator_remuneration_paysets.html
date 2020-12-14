@@ -1,0 +1,1099 @@
+<!--
+*
+*  INSPINIA - Responsive Admin Theme
+*  version 2.6.2
+*
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Kopoka | Pay Sets </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Table -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+                <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="myprofile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="workload_analysis.html">Workload Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">People</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+
+                            <li><a href="persons_staffs.html">Staffs</a></li>
+                            <li><a href="persons_applicants.html">Applicants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="recruitment_manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitment_recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="recruitment_selectionprocess.html">Selection Process</a></li>
+                            <li><a href="recruitment_jobvacancies.html">Job Vacancies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="training_list.html">Training List</a></li>
+                            <li><a href="training_mytrainings.html">My Trainings</a></li>
+                            <li>
+                                <a href="training_administration_events.html">Training Events</a>
+                            </li>
+                            <!--<li>
+                                <a href="training_administration_elearning.html">E-learning</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="career_individualcareerplan.html">Individual Career Plan</a></li>
+                            <li><a href="career_searchtalent.html">Search Talent</a></li>
+                            <li><a href="career_talentpool.html">Talent Pool</a></li>
+                            <li><a href="career_talentdevelopementprogram.html">Talent Development Program</a></li>
+                            <li><a href="career_transfer.html">Direct Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-open"></i><span class="nav-label">Personnel </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="mycalendar.html">My Calendar</a>
+                            </li>
+                            <li>
+                                <a href="workflow.html">Workflows</a>
+                            </li>
+                            <li>
+                                <a href="workshiftassignment.html">Work Shifts</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpense.html">Medical Expense</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpenseadministration.html">Medical Expense Administration</a>
+                            </li>
+                            <li>
+                                <a href="bistripsexpense.html">Business Trip</a>
+                            </li>
+                            <li>
+                                <a href="attendance.html">Attendance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Payroll </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="payroll_salary_entry.html">Salary Entry</a>
+                            </li>
+                            <li>
+                                <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_payslips.html">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> said Please finish your performance planning.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> said Can you check my evidence?
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> said Can I ask regarding my KPI?
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="messages.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> Monica Smith asks for leave approval
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> John Doe asks for attendance approval
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!--<li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
+                            </a>
+                        </li>-->
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row wrapper border-bottom white-bg page-heading">
+                        <div class="col-lg-10">
+                            <h2>Paysets</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="administrator.html">Administrator</a>
+                                </li>
+                                <li>
+                                    <a>Remuneration</a>
+                                </li>
+                                <li class="active">
+                                    <strong>Paysets</strong>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="tabs-container">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#tab-1">Active</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab-2">Inactive</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab-1" class="tab-pane active">
+                                            <div class="panel-body">
+
+
+                                                <a href="administrator_remuneration_paysets_new.html" class="btn btn-primary btn-xs">New pay set</a>
+                                                <button type="button" class="btn btn-primary btn-xs">Export paysets</button>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <!-- When "Select" button is clicked above, add the competency to the list below -->
+                                                        <div class="table-responsive">
+                                                            <table class="footable table table-stripped toggle-arrow-tiny">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th data-toggle="true">Code</th>
+                                                                        <th data-toggle="true">Name</th>
+                                                                        <th data-hide="all">Description</th>
+                                                                        <th data-hide="all">Pay item(s)</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>STD</td>
+                                                                        <td>Standard Pay Set</td>
+                                                                        <td>Etiam leo tellus, imperdiet ac rutrum eget, dapibus vel nulla. </td>
+                                                                        <td>
+                                                                            BS_W - Basic Salary, TLK_A - Tunjangan Luar Kota, L_A - Lembur, TKH_A - Tunjangan Kemahalan
+                                                                        </td>
+                                                                        <td>
+                                                                            <td class="text-right">
+                                                                                <div class="btn-group">
+                                                                                    <button class="btn-white btn btn-xs">Edit</button>
+                                                                                    <button class="btn-white btn btn-xs">Archive</button>
+                                                                                    <button class="btn-white btn btn-xs">Delete</button>
+                                                                                </div>
+
+                                                                            </td>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>FRL</td>
+                                                                        <td>Freelance Pay Set</td>
+                                                                        <td>Nullam vitae tristique mi. Aenean a metus ut metus convallis venenatis. Sed vehicula commodo molestie. Suspendisse consequat turpis at dui gravida hendrerit. </td>
+                                                                        <td>
+
+                                                                            BS_W - Basic Salary, THDR_A - Tunjangan Kehadiran, L_A - Lembur, TL_A - Tunjangan Lembur
+                                                                        </td>
+                                                                        <td>
+                                                                            <td class="text-right">
+                                                                                <div class="btn-group">
+                                                                                    <button class="btn-white btn btn-xs">Edit</button>
+                                                                                    <button class="btn-white btn btn-xs">Archive</button>
+                                                                                    <button class="btn-white btn btn-xs">Delete</button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="5">
+                                                                            <ul class="pagination pull-right"></ul>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div id="tab-2" class="tab-pane active">
+                                            <div class="panel-body">
+
+                                                <button type="button" class="btn btn-primary btn-xs">Export paysets</button>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <!-- When "Select" button is clicked above, add the competency to the list below -->
+                                                        <div class="table-responsive">
+                                                            <table class="footable table table-stripped toggle-arrow-tiny">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th data-toggle="true">Code</th>
+                                                                        <th data-toggle="true">Name</th>
+                                                                        <th data-hide="all">Description</th>
+                                                                        <th data-hide="all">Pay item(s)</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>PRT</td>
+                                                                        <td>Part-timer pay set</td>
+                                                                        <td>Etiam leo tellus, imperdiet ac rutrum eget, dapibus vel nulla. </td>
+                                                                        <td>
+                                                                            BS_W - Basic Salary, L_A - Lembur, TL_A - Tunjangan Lembur
+                                                                        </td>
+                                                                        <td>
+                                                                            <td class="text-right">
+                                                                                <div class="btn-group">
+                                                                                    <button class="btn-white btn btn-xs">Unarchive</button>
+                                                                                    <button class="btn-white btn btn-xs">Delete</button>
+                                                                                </div>
+
+                                                                            </td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="5">
+                                                                            <ul class="pagination pull-right"></ul>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modal_mf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <textarea class="form-control" rows="6"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="pull-right">
+                                <strong>Version</strong> 2.x.xxxx.
+                            </div>
+                            <div>
+                                <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-chat-box fadeInRight animated">
+                    <div class="heading" draggable="true">
+                        <small class="chat-date pull-right">
+                            02.19.2015
+                        </small> Small chat
+                    </div>
+                    <div class="content">
+
+                        <div class="left">
+                            <div class="author-name">
+                                Monica Jackson <small class="chat-date">
+                                    10:02 am
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                Lorem Ipsum is simply dummy text input.
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Mick Smith
+                                <small class="chat-date">
+                                    11:24 am
+                                </small>
+                            </div>
+                            <div class="chat-message">
+                                Lorem Ipsum is simpl.
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Alice Novak
+                                <small class="chat-date">
+                                    08:45 pm
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                Check this stock char.
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Anna Lamson
+                                <small class="chat-date">
+                                    11:24 am
+                                </small>
+                            </div>
+                            <div class="chat-message">
+                                The standard chunk of Lorem Ipsum
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Mick Lane
+                                <small class="chat-date">
+                                    08:45 pm
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                I belive that. Lorem Ipsum is simply dummy text.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-chat">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">
+                                    Send
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="small-chat">
+                    <span class="badge badge-warning pull-right">5</span>
+                    <a class="open-small-chat">
+                        <i class="fa fa-comments"></i>
+                    </a>
+                </div>
+                <div id="right-sidebar" class="animated">
+                    <div class="sidebar-container">
+                        <ul class="nav nav-tabs navs-3">
+                            <li class="active">
+                                <a data-toggle="tab" href="#tab-1">
+                                    Notes
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-2">
+                                    Projects
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#tab-3">
+                                    <i class="fa fa-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="sidebar-title">
+                                    <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
+                                    <small><i class="fa fa-tim"></i> You have 10 new message.</small>
+                                </div>
+                                <div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                There are many variations of passages of Lorem Ipsum available.
+                                                <br>
+                                                <small class="text-muted">Today 4:21 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                                <br>
+                                                <small class="text-muted">Yesterday 2:45 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                <br>
+                                                <small class="text-muted">Yesterday 1:10 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                                <br>
+                                                <small class="text-muted">Monday 8:37 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                All the Lorem Ipsum generators on the Internet tend to repeat.
+                                                <br>
+                                                <small class="text-muted">Today 4:21 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                                <br>
+                                                <small class="text-muted">Yesterday 2:45 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
+                                                <br>
+                                                <small class="text-muted">Yesterday 1:10 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Uncover many web sites still in their infancy. Various versions have.
+                                                <br>
+                                                <small class="text-muted">Monday 8:37 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-2" class="tab-pane">
+                                <div class="sidebar-title">
+                                    <h3> <i class="fa fa-cube"></i> Latest projects</h3>
+                                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                                </div>
+                                <ul class="sidebar-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Business valuation</h4> It is a long established fact that a reader will be distracted.
+                                            <div class="small">Completion with: 22%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Contract with Company </h4> Many desktop publishing packages and web page editors.
+                                            <div class="small">Completion with: 48%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Meeting</h4> By the readable content of a page when looking at its layout.
+                                            <div class="small">Completion with: 14%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">NEW</span>
+                                            <h4>The generated</h4> There are many variations of passages of Lorem Ipsum available.
+                                            <div class="small">Completion with: 22%</div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Business valuation</h4> It is a long established fact that a reader will be distracted.
+                                            <div class="small">Completion with: 22%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Contract with Company </h4> Many desktop publishing packages and web page editors.
+                                            <div class="small">Completion with: 48%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Meeting</h4> By the readable content of a page when looking at its layout.
+                                            <div class="small">Completion with: 14%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-primary pull-right">NEW</span>
+                                            <h4>The generated</h4>
+                                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
+                                            There are many variations of passages of Lorem Ipsum available.
+                                            <div class="small">Completion with: 22%</div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id="tab-3" class="tab-pane">
+                                <div class="sidebar-title">
+                                    <h3><i class="fa fa-gears"></i> Settings</h3>
+                                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                                </div>
+
+                                <div class="setings-item">
+                                    <span>
+                                        Show notifications
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                            <label class="onoffswitch-label" for="example">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Disable Chat
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                                            <label class="onoffswitch-label" for="example2">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Enable history
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                            <label class="onoffswitch-label" for="example3">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Show charts
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                            <label class="onoffswitch-label" for="example4">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Offline users
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                            <label class="onoffswitch-label" for="example5">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Global search
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                            <label class="onoffswitch-label" for="example6">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>
+                                        Update everyday
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                            <label class="onoffswitch-label" for="example7">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sidebar-content">
+                                    <h4>Settings</h4>
+                                    <div class="small">
+                                        I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry. And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mainly scripts -->
+            <script src="js/jquery-2.1.1.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+            <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+            <script src="js/bootstrap-select.js"></script>
+
+            <!-- Table -->
+            <script src="js/plugins/footable/footable.all.min.js"></script>
+            <script src="js/plugins/dataTables/datatables.min.js"></script>
+
+            <!-- Custom and plugin javascript -->
+            <script src="js/inspinia.js"></script>
+            <script src="js/plugins/pace/pace.min.js"></script>
+
+            <!-- SUMMERNOTE -->
+            <script src="js/plugins/summernote/summernote.min.js"></script>
+
+            <!-- Chosen -->
+            <script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+            <!-- Page-Level Scripts -->
+            <script>
+                $(document).ready(function () {
+                    $('.alert-success').hide();
+                    $('.netis_saving').hide();
+                    $('.netis_cancel').hide();
+                    $('.summernote').summernote('disable');
+
+                    $('.footable').footable();
+                    $('.footable2').footable();
+                    $('.summernote').summernote();
+
+                    $('.netis_edit').click(function () {
+                        $('.netis_saving').show();
+                        $('.netis_cancel').show();
+                        $('.netis_edit').hide();
+                        $('.summernote').summernote('enable');
+                    });
+                    $('.netis_cancel').click(function () {
+                        $('.netis_saving').hide();
+                        $('.netis_cancel').hide();
+                        $('.netis_edit').show();
+                        $('.alert-success').hide();
+                        $('.summernote').summernote('disable');
+                    });
+                    $('.netis_saving').click(function () {
+                        $('.alert-success').show();
+                        $('.netis_saving').hide();
+                        $('.netis_cancel').hide();
+                        $('.netis_edit').show();
+                        $('.summernote').summernote('disable');
+                    });
+                    $('.netis_modal_saving').click(function () {
+                        $('.alert-success').show();
+                    });
+                    $('.netis_modal_close').click(function () {
+                        $('.alert-success').hide();
+                    });
+                    $('.dataTables-example').DataTable({
+                        pageLength: 25,
+                        responsive: true,
+                        dom: '<"html5buttons"B>lTfgitp',
+                        buttons: [
+                            {
+                                extend: 'copy'
+                            },
+                            {
+                                extend: 'csv'
+                            },
+                            {
+                                extend: 'excel',
+                                title: 'ExampleFile'
+                            },
+                            {
+                                extend: 'pdf',
+                                title: 'ExampleFile'
+                            },
+
+                            {
+                                extend: 'print',
+                                customize: function (win) {
+                                    $(win.document.body).addClass('white-bg');
+                                    $(win.document.body).css('font-size', '10px');
+
+                                    $(win.document.body).find('table')
+                                        .addClass('compact')
+                                        .css('font-size', 'inherit');
+                                }
+                            }
+                        ]
+
+                    });
+                    $('.html5buttons').hide();
+                    $('.dataTables_length').hide();
+                    $('#DataTables_Table_0_filter').hide();
+                    $('#DataTables_Table_1_filter').hide();
+                    $('#DataTables_Table_2_filter').hide();
+                    $('#DataTables_Table_3_filter').hide();
+                    $('#DataTables_Table_4_filter').hide();
+                    $('#DataTables_Table_5_filter').hide();
+                    $('#DataTables_Table_6_filter').hide();
+                    $('#DataTables_Table_7_filter').hide();
+                    $('#DataTables_Table_8_filter').hide();
+
+
+                });
+
+                $(".netis_competency_btn").click(function () {
+                    alert("Open page Competency");
+                });
+                $('.chosen-select').chosen({
+                    width: "100%"
+                });
+            </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Organization Diagrams </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        function loadChilds(actualElement, successFunction) {
+            console.log(actualElement);
+            var data = "";
+            if (actualElement.id == 2) {
+                var data = JSON.parse('{"result":[{"id":"5","desc":"Sales 1","hasChild":false},{"id":"6","desc":"Sales 2","hasChild":false}]}');
+            }
+            console.log("Loadchilds data for " + actualElement.id + " is " + data);
+            successFunction(data);
+        }
+    </script>
+
+    <style>
+        #jobTitle {
+            cursor: move;
+            height: 700px;
+        }
+        
+        .link {
+            fill: none;
+            stroke: #424242;
+            stroke-width: 1.5px;
+        }
+    </style>
+
+    <script>
+        var orgChart = (function () {
+            var _root = {}
+            _margin = {
+                    top: 20,
+                    right: 20,
+                    bottom: 20,
+                    left: 20
+                },
+                _nodes = [],
+                _counter = 0,
+                _svgroot = null,
+                _svg = null,
+                _tree = null,
+                _lineFunction = null,
+                _loadFunction = null,
+                _duration = 750,
+                _rectW = 150,
+                _rectH = 50,
+                _rectSpacing = 20,
+                _fixedDepth = 80;
+
+            defLinearGradient = function (id, x1, y1, x2, y2, stopsdata) {
+                    var gradient = _svgroot.append("svg:defs")
+                        .append("svg:linearGradient")
+                        .attr("id", id)
+                        .attr("x1", x1)
+                        .attr("y1", y1)
+                        .attr("x2", x2)
+                        .attr("y2", y2)
+                        .attr("spreadMethod", "pad");
+
+                    $.each(stopsdata, function (index, value) {
+                        gradient.append("svg:stop")
+                            .attr("offset", value.offset)
+                            .attr("stop-color", value.color)
+                            .attr("stop-opacity", value.opacity);
+                    });
+                },
+
+                defBoxShadow = function (id) {
+                    var filter = _svgroot.append("svg:defs")
+                        .append("svg:filter")
+                        .attr("id", id).attr("height", "150%").attr("width", "150%");
+
+                    filter.append("svg:feOffset")
+                        .attr("dx", "2").attr("dy", "2").attr("result", "offOut");
+                    filter.append("svg:feGaussianBlur")
+                        .attr("in", "offOut").attr("result", "blurOut").attr("stdDeviation", "2");
+                    filter.append("svg:feBlend")
+                        .attr("in", "SourceGraphic").attr("in2", "blurOut").attr("mode", "normal");
+                }
+
+            update = function (source) {
+
+                    console.log("Test for root values: ");
+                    console.log(_tree.nodes(_root).reverse());
+
+                    _nodes = _tree.nodes(_root).reverse();
+                    var links = _tree.links(_nodes);
+
+                    _nodes.forEach(function (d) {
+                        d.y = d.depth * _fixedDepth;
+                    });
+
+                    var node = _svg.selectAll("g.node")
+                        .data(_nodes, function (d) {
+                            return d.id || (d.id = ++_counter);
+                        });
+
+                    var nodeEnter = node.enter().append("g")
+                        .attr("class", "node")
+                        .attr("transform", function (d) {
+                            return "translate(" + source.x0 + ", " + source.y0 + ")";
+                        })
+                        .on("click", nodeclick);
+
+                    nodeEnter.append("rect")
+                        .attr("width", _rectW)
+                        .attr("height", _rectH)
+                        .attr("fill", "#898989")
+                        .attr("filter", "url(#boxShadow)");
+
+                    nodeEnter.append("rect")
+                        .attr("width", _rectW)
+                        .attr("height", _rectH)
+                        .attr("id", function (d) {
+                            return d.id;
+                        })
+                        .attr("fill", function (d) {
+                            return (d.children || d._children || d.hasChild) ? "url(#gradientchilds)" : "url(#gradientnochilds)";
+                        })
+                        .style("cursor", function (d) {
+                            return (d.children || d._children || d.hasChild) ? "pointer" : "default";
+                        })
+                        .attr("class", "box");
+
+                    nodeEnter.append("text")
+                        .attr("x", _rectW / 2)
+                        .attr("y", _rectH / 2)
+                        .attr("dy", ".35em")
+                        .attr("text-anchor", "middle")
+                        .style("cursor", function (d) {
+                            return (d.children || d._children || d.hasChild) ? "pointer" : "default";
+                        })
+                        .text(function (d) {
+                            return d.desc;
+                        });
+
+                    // Transition nodes to their new position
+                    var nodeUpdate = node.transition()
+                        .duration(_duration)
+                        .attr("transform", function (d) {
+                            return "translate(" + d.x + ", " + d.y + ")";
+                        });
+
+                    nodeUpdate.select("rect.box")
+                        .attr("fill", function (d) {
+                            return (d.children || d._children || d.hasChild) ? "url(#gradientchilds)" : "url(#gradientnochilds)";
+                        });
+
+                    // Transition exiting nodes to the parent's new position
+                    var nodeExit = node.exit().transition()
+                        .duration(_duration)
+                        .attr("transform", function (d) {
+                            return "translate(" + source.x + "," + source.y + ")";
+                        })
+                        .remove();
+
+                    // Update the links
+                    var link = _svg.selectAll("path.link")
+                        .data(links, function (d) {
+                            return d.target.id;
+                        });
+
+                    link.enter().append("path", "g")
+                        .attr("class", "link")
+                        .attr("d", function (d) {
+                            var u_line = (function (d) {
+                                var u_linedata = [{
+                                        "x": d.source.x0 + parseInt(_rectW / 2),
+                                        "y": d.source.y0 + _rectH + 2
+                                    },
+                                    {
+                                        "x": d.source.x0 + parseInt(_rectW / 2),
+                                        "y": d.source.y0 + _rectH + 2
+                                    },
+                                    {
+                                        "x": d.source.x0 + parseInt(_rectW / 2),
+                                        "y": d.source.y0 + _rectH + 2
+                                    },
+                                    {
+                                        "x": d.source.x0 + parseInt(_rectW / 2),
+                                        "y": d.source.y0 + _rectH + 2
+                                    }];
+                                return u_linedata;
+                            })(d);
+
+                            return _lineFunction(u_line);
+                        });
+
+                    // Transition links to their new position. 
+                    link.transition()
+                        .duration(_duration)
+                        .attr("d", function (d) {
+                            var u_line = (function (d) {
+                                var u_linedata = [{
+                                        "x": d.source.x + parseInt(_rectW / 2),
+                                        "y": d.source.y + _rectH
+                                    },
+                                    {
+                                        "x": d.source.x + parseInt(_rectW / 2),
+                                        "y": d.target.y - _margin.top / 2
+                                    },
+                                    {
+                                        "x": d.target.x + parseInt(_rectW / 2),
+                                        "y": d.target.y - _margin.top / 2
+                                    },
+                                    {
+                                        "x": d.target.x + parseInt(_rectW / 2),
+                                        "y": d.target.y
+                                    }];
+
+                                return u_linedata;
+                            })(d);
+
+                            return _lineFunction(u_line);
+                        });
+
+                    // Transition exiting nodes to the parent's new position.
+                    link.exit().transition()
+                        .duration(_duration)
+                        .attr("d", function (d) {
+                            /* This is needed to draw the lines right back to the caller */
+                            var u_line = (function (d) {
+                                var u_linedata = [{
+                                        "x": _callerNode.x + parseInt(_rectW / 2),
+                                        "y": _callerNode.y + _rectH + 2
+                                    },
+                                    {
+                                        "x": _callerNode.x + parseInt(_rectW / 2),
+                                        "y": _callerNode.y + _rectH + 2
+                                    },
+                                    {
+                                        "x": _callerNode.x + parseInt(_rectW / 2),
+                                        "y": _callerNode.y + _rectH + 2
+                                    },
+                                    {
+                                        "x": _callerNode.x + parseInt(_rectW / 2),
+                                        "y": _callerNode.y + _rectH + 2
+                                    }];
+
+                                return u_linedata;
+                            })(d);
+
+                            return _lineFunction(u_line);
+                        }).each("end", function () {
+                            _callerNode = null; /* After transition clear the caller node variable */
+                        });
+
+                    // Stash the old positions for transition
+                    _nodes.forEach(function (d) {
+                        d.x0 = d.x;
+                        d.y0 = d.y;
+                    });
+                },
+
+                nodeclick = function (d) {
+                    if (!d.children && !d._children && d.hasChild) {
+                        _loadFunction(d, function (childs) {
+                            var response = {
+                                id: d.id,
+                                desc: d.desc,
+                                children: childs.result
+                            };
+
+                            response.children.forEach(function (child) {
+                                if (!_tree.nodes(d)[0]._children) {
+                                    _tree.nodes(d)[0]._children = [];
+                                }
+
+                                child.x = d.x;
+                                child.y = d.y;
+                                child.x0 = d.x0;
+                                child.y0 = d.y0;
+                                _tree.nodes(d)[0]._children.push(child);
+                            });
+
+                            if (d.children) {
+                                _callerNode = d;
+                                _callerMode = 0;
+                                d._children = d.children;
+                                d.children = null;
+                            } else {
+                                _callerNode = null;
+                                _callerMode = 1;
+                                d.children = d._children;
+                                d._children = null;
+                            }
+
+                            update(d);
+                        });
+                    } else {
+                        if (d.children) {
+                            _callerNode = d;
+                            _callerMode = 0; // Collapse
+                            d._children = d.children;
+                            d.children = null;
+                        } else {
+                            _callerNode = d;
+                            _callerMode = 1; // Expand             
+                            d.children = d._children;
+                            d._children = null;
+                        }
+
+                        update(d);
+                    }
+                },
+
+                collapse = function (d) {
+                    if (d.children) {
+                        d._children = d.children;
+                        d._children.forEach(collapse);
+                        d.children = null;
+                    }
+                },
+
+                redraw = function () {
+                    _svg.attr("transform", "translate(" + d3.event.translate + ")" +
+                        "scale(" + d3.event.scale.toFixed(1) + ")");
+                }
+
+            initTree = function (options) {
+                var u_opts = $.extend({
+                    data: {},
+                    loadFunc: function () {}
+                }, options);
+                _root = u_opts.data;
+                _loadFunction = u_opts.loadFunc;
+                _tree = d3.layout.tree().nodeSize([_rectW + _rectSpacing, _rectH + _rectSpacing]);
+
+                $("div#jobTitle").html("");
+
+                var width = $("div#jobTitle").innerWidth() - _margin.left - _margin.right,
+                    height = $("div#jobTitle").innerHeight() - _margin.top - _margin.bottom;
+
+                _lineFunction = d3.svg.line()
+                    .x(function (d) {
+                        return d.x;
+                    })
+                    .y(function (d) {
+                        return d.y;
+                    })
+                    .interpolate("linear");
+
+                var u_childwidth = parseInt((_root.children.length * _rectW) / 2);
+
+                _svgroot = d3.select("div#jobTitle").append("svg").attr("width", width).attr("height", height);
+
+                _svg = _svgroot.append("g")
+                    .attr("transform", "translate(" + parseInt(u_childwidth + ((width - u_childwidth * 2) / 2) - _margin.left / 2) + "," + 20 + ")");
+
+                var u_stops = [{
+                    offset: "0%",
+                    color: "#03A9F4",
+                    opacity: 1
+                }, {
+                    offset: "100%",
+                    color: "#0288D1",
+                    opacity: 1
+                }];
+                defLinearGradient("gradientnochilds", "0%", "0%", "0%", "100%", u_stops);
+                var u_stops = [{
+                    offset: "0%",
+                    color: "#8BC34A",
+                    opacity: 1
+                }, {
+                    offset: "100%",
+                    color: "#689F38",
+                    opacity: 1
+                }];
+                defLinearGradient("gradientchilds", "0%", "0%", "0%", "100%", u_stops);
+
+                _root.x0 = 0;
+                _root.y0 = height / 2;
+                _root.children.forEach(collapse);
+
+                update(_root);
+
+                d3.select("div#jobTitle").style("height", height + _margin.top + _margin.bottom);
+            };
+
+            return {
+                initTree: initTree
+            };
+        })();
+    </script>
+</head>
+
+<body>
+    <script>
+        var sampleData = JSON.parse('{"id":"1","desc":"Executive office","children":[{"id":"2","desc":"Sales","hasChild":true},{"id":"3","desc":"Marketing","hasChild":false},{"id":"4","desc":"Development","hasChild":false}]}');
+        // var sampleData = JSON.parse('{"id":"1","desc":"Executive office","children":[{"id":"2","desc":"Sales","hasChild":false}]}');
+    </script>
+
+    <div id="wrapper">
+
+                                <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="myprofile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="workload_analysis.html">Workload Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">People</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+
+                            <li><a href="persons_staffs.html">Staffs</a></li>
+                            <li><a href="persons_applicants.html">Applicants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="recruitment_manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitment_recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="recruitment_selectionprocess.html">Selection Process</a></li>
+                            <li><a href="recruitment_jobvacancies.html">Job Vacancies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="training_list.html">Training List</a></li>
+                            <li><a href="training_mytrainings.html">My Trainings</a></li>
+                            <li>
+                                <a href="training_administration_events.html">Training Events</a>
+                            </li>
+                            <!--<li>
+                                <a href="training_administration_elearning.html">E-learning</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="career_individualcareerplan.html">Individual Career Plan</a></li>
+                            <li><a href="career_searchtalent.html">Search Talent</a></li>
+                            <li><a href="career_talentpool.html">Talent Pool</a></li>
+                            <li><a href="career_talentdevelopementprogram.html">Talent Development Program</a></li>
+                            <li><a href="career_transfer.html">Direct Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-open"></i><span class="nav-label">Personnel </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="mycalendar.html">My Calendar</a>
+                            </li>
+                            <li>
+                                <a href="workflow.html">Workflows</a>
+                            </li>
+                            <li>
+                                <a href="workshiftassignment.html">Work Shifts</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpense.html">Medical Expense</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpenseadministration.html">Medical Expense Administration</a>
+                            </li>
+                            <li>
+                                <a href="bistripsexpense.html">Business Trip</a>
+                            </li>
+                            <li>
+                                <a href="attendance.html">Attendance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Payroll </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="payroll_salary_entry.html">Salary Entry</a>
+                            </li>
+                            <li>
+                                <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_payslips.html">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Organization Diagrams</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a>Organization</a>
+                        </li>
+                        <li class="active">
+                            <strong>Organization Diagrams</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a data-toggle="tab" href="#tab-1">Groups and Units</a></li>
+                        <li class="active"><a data-toggle="tab" href="#tab-2">Job Titles/Persons</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <strong>Diagram for <div class="label label-primary">companies</div>, <div class="label label-danger">branches</div> and <div class="label label-success">units</div></strong>
+                                <!-- Perhaps use https://codepen.io/siiron/pen/aLkdE ? -->
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                <strong>Chart showing Job Titles and Persons</strong>
+                                <div id="jobTitle"></div>
+                                <script>
+                                    orgChart.initTree({
+                                        data: sampleData,
+                                        loadFunc: loadChilds
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Mainly scripts -->
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Custom and plugin javascript -->
+        <script src="js/inspinia.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <script src="js/w3data.js"></script>
+        <script>
+            w3IncludeHTML();
+        </script>
+
+</body>
+
+</html>

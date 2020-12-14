@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kopoka | Talent Development Program</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+
+    <!-- X-editable CDN styles -->
+    <link href="css/bootstrap-editable.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+                                <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Arnold Siboro</strong>
+                             </span> <span class="text-muted text-xs block">HR Admin <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="myprofile.html">Profile</a></li>
+                                <li><a href="myaccount.html">Account</a></li>
+                                <li><a href="mysettings.html">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_two_columns.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            NHR
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i><span class="nav-label">Main</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i><span class="nav-label">Job</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">Structure<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="job_levels.html">Job Levels/Sub-levels</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_roles.html">Job Roles/Role Bands</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_clans.html">Job Clans/Families</a>
+                                    </li>
+                                    <li>
+                                        <a href="job_titles.html">Job Titles</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a href="accountability_matrix.html">Accountability Matrix</a></li>
+                            <li><a href="job_description.html">Job Description</a></li>
+                            <li><a href="workload_analysis.html">Workload Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">People</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="#"><span class="nav-label">Competency Model</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="competency_dictionary.html">Competency Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competency_matrix.html">Competency Matrix</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="organisation_units.html">Units</a></li>
+                            <li><a href="organisation_diagrams.html">Diagrams</a></li>
+
+                            <li><a href="persons_staffs.html">Staffs</a></li>
+                            <li><a href="persons_applicants.html">Applicants</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i><span class="nav-label">Recruitment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="recruitment_manpowerplanning.html">Manpower Planning</a></li>
+                            <li><a href="recruitment_recruitmentplanning.html">Recruitment Planning</a></li>
+                            <li><a href="recruitment_selectionprocess.html">Selection Process</a></li>
+                            <li><a href="recruitment_jobvacancies.html">Job Vacancies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-line-chart"></i><span class="nav-label">Performance</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="performance_kpi_view.html">Indicators</a></li>
+                            <li><a href="#"><span class="nav-label">Planning</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_planning_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_planning_competency.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_coaching.html">Coaching</a></li>
+                            <li><a href="performance_evidence.html">Evidence</a></li>
+                            <li><a href="#"><span class="nav-label">Evaluation</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">KPI</a>
+                                    </li>
+                                    <li>
+                                        <a href="performance_evaluation_kpi.html">Competency</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="performance_information.html">Performance Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Training</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="training_list.html">Training List</a></li>
+                            <li><a href="training_mytrainings.html">My Trainings</a></li>
+                            <li>
+                                <a href="training_administration_events.html">Training Events</a>
+                            </li>
+                            <!--<li>
+                                <a href="training_administration_elearning.html">E-learning</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i><span class="nav-label">Career</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li><a href="career_individualcareerplan.html">Individual Career Plan</a></li>
+                            <li><a href="career_searchtalent.html">Search Talent</a></li>
+                            <li><a href="career_talentpool.html">Talent Pool</a></li>
+                            <li><a href="career_talentdevelopementprogram.html">Talent Development Program</a></li>
+                            <li><a href="career_transfer.html">Direct Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-open"></i><span class="nav-label">Personnel </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="mycalendar.html">My Calendar</a>
+                            </li>
+                            <li>
+                                <a href="workflow.html">Workflows</a>
+                            </li>
+                            <li>
+                                <a href="workshiftassignment.html">Work Shifts</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpense.html">Medical Expense</a>
+                            </li>
+                            <li>
+                                <a href="medicalexpenseadministration.html">Medical Expense Administration</a>
+                            </li>
+                            <li>
+                                <a href="bistripsexpense.html">Business Trip</a>
+                            </li>
+                            <li>
+                                <a href="attendance.html">Attendance</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-usd"></i><span class="nav-label">Payroll </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level  ">
+                            <li>
+                                <a href="payroll_salary_entry.html">Salary Entry</a>
+                            </li>
+                            <li>
+                                <a href="payroll_tax_calculation.html">Tax Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_overtime_calculation.html">Overtime Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_salary_calculation.html">Salary Calculation</a>
+                            </li>
+                            <li>
+                                <a href="payroll_payslips.html">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="administrator.html"><i class="fa fa-sliders"></i><span class="nav-label">Administrator</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by site manager -->
+                    <li>
+                        <a href="site_management.html"><i class="fa fa-columns"></i><span class="nav-label">Site Management</span></a>
+                    </li>
+                    <!-- This menu below is to be accessed only by system manager -->
+                    <li>
+                        <a href="system_management.html"><i class="fa fa-database"></i><span class="nav-label">System Management</span></a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <h3>PT Netika Indonesia</h3>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to Kopoka.</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> said Please finish your performance planning.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> said Can you check my evidence?
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> said Can I ask regarding my KPI?
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="messages.html">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> Monica Smith asks for leave approval
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> John Doe asks for attendance approval
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Talent Development Program</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            Career
+                        </li>
+                        <li class="active">
+                            <strong>Talent Development Program</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <div class="form-group">
+                                        <div>View development status and send talents who have completed development program to Talent Readiness
+                                            <p></p>
+                                        </div>
+                                        <label class="control-label" for="status">Select target job title</label>
+                                        <div class="input-group">
+                                            <select data-placeholder="Choose a job title..." class="chosen-select input-sm form-control" tabindex="2">
+                                                <option selected value="0">Any</option>
+                                                <option value="1">DIR-FIN Director of Finance</option>
+                                                <option value="2">DIR-HR Director of HR</option>
+                                                <option value="3">ITD IT Developer</option>
+                                                <option value="4">MS Marketing Staff</option>
+                                            </select>
+                                            <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-sm btn-white" data-toggle="modal" data-target="#searchjobtitle">Browse</button>
+                                                </span>
+                                            <div class="modal" id="searchjobtitle">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content animated">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h4 class="modal-title">Browse for job title</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    Job level
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <select data-placeholder="Choose a job level..." class="chosen-select" tabindex="2">
+                                                                        <option value="1">01-EXE EXECUTIVE </option>
+                                                                        <option value="2"> 02-DIR DIREKTORAT</option>
+                                                                        <option value="3">03-DIV DIVISI</option>
+                                                                        <option value="3" selected>04-DEPT DEPARTMENT</option>
+                                                                        <option value="3">05-SEC SECTION</option>
+                                                                        <option value="3">06-STAFF STAFF</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    Job sub-level
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <select data-placeholder="Choose a job sub-level..." class="chosen-select" tabindex="2">
+                                                                        <option value="1">DEPT-HC Department Human Capital</option>
+                                                                        <option value="2">DEPT-FA Department Finance Accounting</option>
+                                                                        <option value="3" selected>DEPT-TECH Department Technology</option>
+                                                                        <option value="3">DEPT-ACC Department Accounting</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    Job title
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <select data-placeholder="Choose a job title..." class="chosen-select" tabindex="2">
+                                                                        <option value="1">MGR-BR Manager of Business Development</option>
+                                                                        <option selected value="2">MGR-FIN Manager of Finance</option>
+                                                                        <option value="3">MGR-HR Manager of HR</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary">Select</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="text" placeholder="Any" class="input form-control">
+                                <span class="input-group-btn">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+                                </span>
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary btn-xs">Export list</button>
+                            <!--
+                            <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#submitselected">Submit selected persons</button>
+                            <div class="modal inmodal" id="submitselected" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Confirmation</h4>
+                                        </div>
+                                        <div class="modal-body">Are you sure to submit selected person(s) to Talent Readiness?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+-->
+
+                            <div class="form-group">
+                                <label class="control-label">Show&nbsp;</label>
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-sm btn-white active">
+                                        <input type="radio" id="option1" name="options">All </label>
+                                    <label class="btn btn-sm btn-white ">
+                                        <input type="radio" id="option2" name="options">Under development</label>
+                                    <label class="btn btn-sm btn-white">
+                                        <input type="radio" id="option3" name="options">Ready</label>
+                                </div>
+                            </div>
+
+                            <div class="clients-list">
+                                <span class="pull-right small text-muted">16 persons</span>
+                                <div class="full-height-scroll">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover">
+                                            <thead>
+                                                <th>
+                                                </th>
+                                                <th>
+                                                    ID
+                                                </th>
+                                                <th>
+                                                    Name/Unit/Job Title
+                                                </th>
+                                                <th>
+                                                    Status
+                                                </th>
+                                                <th></th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="client-avatar"><img alt="image" src="img/a2.jpg"> </td>
+                                                    <td> 10033 </td>
+                                                    <td><a data-toggle="tab" href="#contact-1" class="client-link">Tono Kartono
+                                                            <br><small>IT Team/IT Developer</small></a></td>
+                                                    <td><i class="fa fa-cogs"></i></td>
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" value="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="client-avatar"><img alt="image" src="img/a3.jpg"> </td>
+                                                    <td> 10022 </td>
+                                                    <td><a data-toggle="tab" href="#contact-2" class="client-link">Tini Kartini
+                                                            <br><small>Marketing Communication/Staff</small></a></td>
+                                                    <td><i class="fa fa-check"></i></td>
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" value="">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="ibox ">
+
+                        <div class="ibox-content">
+                            <div class="tab-content">
+                                <div id="contact-1" class="tab-pane active">
+                                    <div class="row m-b-lg">
+                                        <div class="col-lg-4 text-center">
+
+                                            <h2>Tono Kartono</h2>
+
+                                            <div class="m-b-sm">
+                                                <img alt="image" class="img-circle" src="img/a2.jpg" style="width: 62px">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h4>
+													ID : 10033
+												</h4>
+                                            <h4>
+													Job Title : IT Developer
+												</h4>
+                                            <h4>
+													Organization Unit : IT Team
+												</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-b-lg">
+                                        <div class="col-lg-6"><strong>Status:</strong> Under Development</div>
+                                        <div class="col-lg-6">
+                                            <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#submitthisperson">Submit this person</button>
+                                            <div class="modal inmodal" id="submitthisperson" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content animated">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h4 class="modal-title">Confirmation</h4>
+                                                        </div>
+                                                        <div class="modal-body">Are you sure to submit this person to Talent Readiness?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>&nbsp;&nbsp;
+
+                                        <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#">Cancel</button>
+                                    </div>
+
+                                    <div class="client-detail">
+                                        <div class="full-height-scroll">
+
+
+                                            <strong>Talent information</strong>
+                                            <ul class="list-group clear-list">
+                                                <li class="list-group-item fist-item">
+                                                    <span class="pull-right"> 90 </span> Performance score
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> 200</span> Potential score
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> 2 </span> Quadrant
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> System </span> Specified by
+                                                </li>
+                                            </ul>
+
+
+                                            <strong>Development items</strong>
+
+                                            <ul class="list-group clear-list">
+                                                <li class="list-group-item fist-item">
+                                                    <span class="pull-right">  
+                                                            <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> 
+                                                            
+                                                        </span> Training
+
+
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value=""> <i></i></label>
+                                                        </div></span> Project Assignment
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> </span> Coaching
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> </span> Counseling
+                                                </li>
+                                            </ul>
+                                            <strong>Notes</strong>
+                                            <div class="ibox float-e-margins">
+                                                <div class="ibox-content profile-content">
+                                                    <h4>Training</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                    <h4>Coaching</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                    <h4>Counseling</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="contact-2" class="tab-pane active">
+                                    <div class="row m-b-lg">
+                                        <div class="col-lg-4 text-center">
+
+                                            <h2>Tini Kartini</h2>
+
+                                            <div class="m-b-sm">
+                                                <img alt="image" class="img-circle" src="img/a3.jpg" style="width: 62px">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h4>
+													ID : 10033
+												</h4>
+                                            <h4>
+													Job Title : Staff
+												</h4>
+                                            <h4>
+													Organization Unit : Marketing Communication
+												</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-b-lg">
+                                        <div class="col-lg-6"><strong>Status:</strong> Talent Ready</div>
+                                        <div class="col-lg-6">
+
+                                            <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#transfer">Transfer</button>
+                                            <div class="modal inmodal" id="transfer" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content animated">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h4 class="modal-title">Confirmation</h4>
+                                                        </div>
+                                                        <div class="modal-body">Are you sure to transfer this person to new job title?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary">Transfer</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+
+                                            <button type="button" class="btn btn-primary btn-xs pull-right" data-toggle="modal" data-target="#">Cancel</button>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="client-detail">
+                                        <div class="full-height-scroll">
+
+                                            <strong>Development items</strong>
+
+                                            <ul class="list-group clear-list">
+                                                <li class="list-group-item fist-item">
+                                                    <span class="pull-right">  
+                                                            <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> 
+                                                            
+                                                        </span> Training
+
+
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value=""> <i></i></label>
+                                                        </div></span> Project Assignment
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> </span> Coaching
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right">  <div class="i-checks">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked=""> <i></i></label>
+                                                        </div> </span> Counseling
+                                                </li>
+                                            </ul>
+                                            <strong>Notes</strong>
+                                            <div class="ibox float-e-margins">
+                                                <div class="ibox-content profile-content">
+                                                    <h4>Training</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                    <h4>Coaching</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                    <h4>Counseling</h4>
+                                                    <p>
+                                                        <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    <strong>Version</strong> 2.x.xxxx.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Netika Indonesia &copy; 2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- X-editable CDN styles -->
+    <script src="js/bootstrap-editable.min.js"></script>
+
+
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+
+    <script>
+        $('.chosen-select').chosen({
+            width: "100%"
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+        $(function () {
+
+
+            //turn to inline mode
+            $.fn.editable.defaults.mode = 'inline';
+
+            //defaults
+            $.fn.editable.defaults.url = '#';
+
+
+            $('#comments').editable({
+                showbuttons: 'bottom'
+            });
+
+            $('#user .editable').on('hidden', function (e, reason) {
+                if (reason === 'save' || reason === 'nochange') {
+                    var $next = $(this).closest('tr').next().find('.editable');
+                    if ($('#autoopen').is(':checked')) {
+                        setTimeout(function () {
+                            $next.editable('show');
+                        }, 300);
+                    } else {
+                        $next.focus();
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
