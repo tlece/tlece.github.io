@@ -1,12 +1,14 @@
 //modal
 function Modal() {
+	var  moviestart;
 	$('.js-modal-open').each(function () {
 		$(this).on('click', function () {
 			scrollPos = $(window).scrollTop();
 			var target = $(this).data('target');
 			var movietarget = $(this).data('movienum');
 			var modal = document.getElementById(target);
-			var moviestart = document.getElementById(movietarget);
+			moviestart = document.getElementById(movietarget);
+
 			$(modal).fadeIn();
 			//moviestart.play();
 			$('html').addClass('scroll-lock').css({ 'margin-right': '17px' });
@@ -15,7 +17,7 @@ function Modal() {
 			//close
 			$('.js-modal-close').on('click', function () {
 				if (moviestart != null) {
-					moviestart.pause();
+					stopmovie();
 				}
 				return false;
 			});
@@ -25,12 +27,18 @@ function Modal() {
 	//close
 	$('.js-modal-close').on('click', function () {
 		$('.modal').fadeOut();
+		stopmovie();
 		$('html').removeClass('scroll-lock').css({ 'margin-right': '0px' });
 		$('.header_wrap').css({ zIndex: 998 });
 		$(window).scrollTop(scrollPos);
 		return false;
 	});
+	function stopmovie() {
+		var playerWindow = moviestart.contentWindow;
+    	playerWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+	}
 }
+
 var timer = null;
 $(window).scroll(function () {
 	clearTimeout(timer);
