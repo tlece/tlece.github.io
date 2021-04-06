@@ -10,9 +10,9 @@ function Modal() {
 			moviestart = document.getElementById(movietarget);
 
 			$(modal).fadeIn();
-			//moviestart.play();
 			$('html').addClass('scroll-lock').css({ 'margin-right': '17px' });
 			$('.header_wrap').css({ zIndex: 1 });
+			startmovie();
 
 			//close
 			$('.js-modal-close').on('click', function () {
@@ -33,9 +33,13 @@ function Modal() {
 		$(window).scrollTop(scrollPos);
 		return false;
 	});
+	function startmovie() {
+		var playerWindow = moviestart.contentWindow;
+		playerWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+	}
 	function stopmovie() {
 		var playerWindow = moviestart.contentWindow;
-    	playerWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+		playerWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 	}
 }
 
