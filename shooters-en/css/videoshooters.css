@@ -259,12 +259,73 @@ html.scroll-lock {
 	right: 0;
 	margin: auto;
 }
+/*------------- scount down --------------*/
+.count_down{
+	background-color: #ecf1c7;
+	max-height: 113px;
+}
+.count_down .inner_box{
+	width: 960px;
+	padding: 41px 0;
+	display: flex;
+}
+.date{
+	display: inline-block;
+	margin-top: -4px;
+}
+.date span{
+	font-size: 28px;
+	font-weight: 600;
+	background: rgba(255,255,255,0.68);
+	border-radius: 8px;
+	padding: 10px 20px 6px;
+	margin-right: 40px;
+}
+.date time{
+	font-size: 36px;
+	font-weight: 700;
+}
+.date_text{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 28px;
+}
+.count_down_num{
+	display: inline-block;
+	position: relative;
+}
+.count_down_num .count_down_num_inner{
+	position: absolute;
+	top: -58px;
+	left: 48px;
+	text-align: center;
+	z-index: 2;
+}
+.count_down_num .count_text{
+	font-size: 26px;
+}
+.count_down_num .count_num{
+	font-size: 65px;
+	text-shadow: -10px -5px 10px #fff, 0 0 30px #fff, 10px 5px 10px #fff;
+}
+.count_down_num::after{
+	content: "";
+	background:url(../img/bg_count.png) no-repeat;
+	background-size: 100%;
+	width: 165px;
+	height: 163px;
+	position: absolute;
+	top: -89px;
+	left: 3px;
+	z-index: 1;
+}
+
 
 /*------------- section_02 --------------*/
 .section_02 { margin-bottom: 80px; }
 .bg_gradation_pc {
 	width: 100%;
-  	background:url(../img/blue.png) no-repeat, url(../img/green.png) no-repeat;
+  background:url(../img/blue.png) no-repeat, url(../img/green.png) no-repeat;
 	background-size: 90%,90%;
 	background-position: right -23vw top -16vw, left -23vw top 10vw;
 	z-index: -1;
@@ -689,6 +750,36 @@ a.globalrid_url {
 			max-height: 80vh;
 		}
 
+		/*------------- count_down --------------*/
+		.count_down .inner_box {
+			flex-flow: column;
+			align-items: center;
+			width: 100%;
+    	padding: 5vw 4vw 11vw 4vw;
+		}
+		.date{
+			margin-bottom: 4vw;
+		}
+		.tb_layaut{
+			width: 100%;
+			margin: auto;
+			text-align: center;
+			margin-left: -6vw;
+		}
+
+		.count_down_num::after{
+			content: "";
+			background:url(../img/bg_count_sp.png) no-repeat;
+			background-size: 100%;
+			width: 165px;
+			height: 163px;
+			position: absolute;
+			top: -88px;
+		}
+		.count_down {
+			max-height: 100%;
+		}
+
 		/*------------- section_02 --------------*/
 		.bg_gradation_pc {
 			background-size: 120%,120%;
@@ -858,7 +949,6 @@ a.globalrid_url {
 			background-color:#fff;
 			border-radius:2px;
 		}
-		
 
 		/*------------- section_01 --------------*/
 		.bg_gradation_pc {
@@ -897,6 +987,59 @@ a.globalrid_url {
 			max-width: 100%; 
 		}
 		.img_close { left: 87%; }
+
+		/*------------- count down --------------*/
+		.date_text {
+			line-height: 1.4;
+		}
+		.count_down .inner_box {
+			display: block;
+			width: 100%;
+			padding: 5vw 4vw 11vw 4vw;
+		}
+		.date {
+			display: block;
+		}
+		.date span {
+			display: block;
+			font-size: 6.7vw;
+			width: 100%;
+			margin: auto;
+			text-align: center;
+			padding: 2.8vw 4vw 3vw;
+			position: relative;
+			z-index: 2;
+		}
+		.date_text {
+			width: 50%;
+			font-size: 6.7vw;
+			text-align: left;
+		}
+		.date time {
+			font-size: 8.8vw;
+		}
+		.tb_layaut {
+			margin-left: -12vw;
+		}
+		.count_down_num::after {
+			width: 43.6vw;
+			height: 43.2vw;
+			top: -33vw;
+			left: -7vw;
+		}
+		.count_down_num .count_down_num_inner {
+			top: -25vw;
+			left: 3.5vw;
+		}
+		.count_down_num .count_text {
+			font-size: 6.4vw;
+		}
+		.count_down_num .count_num {
+			font-size: 20vw;
+			/* text-shadow: -3vw -1vw 3vw #fff, 0 0 5vw #fff, 3vw 1vw 3vw #fff; */
+			text-shadow: 0vw 0vw 1vw #fff, 0 0 4vw #fff, 0vw 0vw 1vw #fff;
+		}
+
 
 		/*------------- section_02 --------------*/
 		.section_02 {
