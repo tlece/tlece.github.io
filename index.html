@@ -298,10 +298,10 @@ Good Luck!</p>
 <script>
     $( document ).ready(function(){
       var userLang = navigator.language || navigator.userLanguage;
-      if(userLang == "en"){
+      if(userLang == "en" || userLang == "en-US"){
         window.location.href = "https://www.tlece.com/index.html"
       }
-     else if(userLang == "jp"){
+     else if(userLang == "ja"){
         window.location.href = "https://www.tlece.com/jp/index.html"
       }
       else (userLang == "id"){
