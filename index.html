@@ -298,14 +298,17 @@ Good Luck!</p>
 <script>
     $( document ).ready(function(){
       var userLang = navigator.language || navigator.userLanguage;
-     if(userLang == "jp"){
+      if(userLang == "en"){
+        window.location.href = "https://www.tlece.com/index.html"
+      }
+     else if(userLang == "jp"){
         window.location.href = "https://www.tlece.com/jp/index.html"
       }
       else if(userLang == "id"){
         window.location.href = "https://www.tlece.com/id/index.html"
       }
       else {
-         window.location.href = "https://www.tlece.com/index.html"
+         break
       }
     });
 </script>
