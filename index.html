@@ -264,10 +264,7 @@ Good Luck!</p>
 <script>
     $( document ).ready(function(){
       var userLang = navigator.language || navigator.userLanguage;
-      if(userLang == "en" || userLang == "en-US"){
-        break
-      }
-     else if(userLang == "ja"){
+      if(userLang == "ja"){
         window.location.href = "./jp/index.html"
       }
       else if(userLang == "id"){
