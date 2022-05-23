@@ -52,6 +52,39 @@
     gtag('config', 'G-X325CYY2MT');
   </script>
 
+  <script>
+function import_csv(csv_path)
+{
+    fetch(csv_path)
+    .then((res) => {
+        if(!res.ok) {
+            console.log('The request could not be properly processed');
+        }
+        return res.text();
+    })
+    .then((csv_data) => {
+        convert_array(csv_data);
+    })
+    .catch((error) => {
+        console.log('Error happened');
+    })
+}
+
+function convert_array(csv_data)
+{
+    let data_array = [];
+    const data_string = csv_data.split('\n');
+    for (let i = 0; i < data_string.length; i++) {
+        data_array[i] = data_string[i].split(',');
+    }
+    draw_table(data_array);
+}
+
+import_csv('https://tlece.com/teamdata.csv')
+document.getElementById("team_name").innerHTML = data_array[0];
+
+  </script>
+
 </head>
 
 <body>
@@ -87,7 +120,7 @@
             <table class="table projects" width="100%">
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; "><h3><img src="../../img/asiboro.png"
-                  style="height:4em;"><br>シボロ・アーノルド</h3></th>
+                  style="height:4em;"><br>シボロ・アーノルド</h3><p id="demo"></p></th>
               </tr>
               <tr style="white-space: nowrap;">
                 <td style="text-align:right;">Eメール&nbsp;:</td>
