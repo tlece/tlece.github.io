@@ -76,7 +76,8 @@
         data_array[i] = data_string[i].split(',');
         console.log(i+' = '+data_string[i].split(','));
         console.log('getElementById['+data_array[i][0]+'_name].innerHTML = '+data_array[i][1]);
-        document.getElementById(data_array[i][0]+'_name').innerHTML = data_array[i][1];
+        var s = document.getElementById(data_array[i][0]+'_name')
+        s.value = data_array[i][1];
       }
     }
 
@@ -119,7 +120,7 @@
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  <p id="27722353_name"></p>
+                  Name: <p id="27722353_name"></p>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
