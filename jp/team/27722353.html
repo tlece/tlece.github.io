@@ -75,7 +75,7 @@
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
       }
-      document.getElementById("team_name").innerHTML = data_array[0];
+      document.getElementById(data_array[0]+'_name').innerHTML = data_array[1];
     }
 
     import_csv('https://www.tlece.com/teamdata.csv')
@@ -117,7 +117,7 @@
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  team name: <p id="team_name"></p>
+                  <p id="27722353_name"></p>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
