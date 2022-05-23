@@ -74,9 +74,9 @@
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
-        console.log(i+' = '+data_string[i][0].split(','));
-        console.log('getElementById = '+data_array[0]+'_name');
-        document.getElementById(data_array[i][0]+'_name').innerHTML = data_array[1];
+        console.log(i+' = '+data_string[i].split(','));
+        console.log('getElementById = '+data_array[i][0]+'_name');
+        document.getElementById(data_array[i][0]+'_name').innerHTML = data_array[i][1];
       }
     }
 
