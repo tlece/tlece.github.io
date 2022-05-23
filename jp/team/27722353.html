@@ -75,8 +75,9 @@
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
         console.log(i+' = '+data_string[i].split(','));
-        console.log('getElementById['+data_array[i][0]+'_name].value = '+data_array[i][1]);
-        document.getElementById('27722353_name').innerHTML = data_array[i][1];
+        elementId = data_array[i][0];
+        console.log('getElementById['+elementId+'_name].value = '+data_array[i][1]);
+        document.getElementById(elementId).innerHTML = data_array[i][1];
       }
     }
 
