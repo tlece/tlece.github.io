@@ -75,8 +75,8 @@
       for (let i = 0; i < data_string.length; i++) {
         console.log(i+' = '+data_string[i].split(','))
         data_array[i] = data_string[i].split(',');
+        document.getElementById(data_array[0]+'_name').innerHTML = data_array[1];
       }
-      document.getElementById(data_array[0]+'_name').innerHTML = data_array[1];
     }
 
     import_csv('https://www.tlece.com/teamdata.csv')
