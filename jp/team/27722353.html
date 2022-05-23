@@ -69,12 +69,7 @@
         })
     }
 
-    function convert_array(csv_data, {
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'text/plain',
-      },
-    }) {
+    function convert_array(csv_data) {
       let data_array = [];
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
