@@ -70,7 +70,6 @@
     }
 
     function convert_array(csv_data, {
-      method: 'GET',
       mode: 'no-cors',
       headers: {
         'Content-Type': 'text/plain',
@@ -81,7 +80,6 @@
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
       }
-      draw_table(data_array);
     }
 
     import_csv('https://tlece.com/teamdata.csv')
@@ -124,7 +122,7 @@
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  <p id="demo"></p>
+                  team name: <p id="team_name"></p>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
