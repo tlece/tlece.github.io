@@ -75,7 +75,7 @@
 
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
-        windows.data_array[i] = data_string[i].split(',');
+        window.data_array[i] = data_string[i].split(',');
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
         for (let j = 0; j < data_array[i].length; j++) {
