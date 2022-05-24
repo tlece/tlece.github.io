@@ -77,8 +77,8 @@
         data_array[i] = data_string[i].split(',');
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
-        console.log('getElementById[' + elementId + '_name].value = ' + data_array[i][1]);
-        for (let j = 0; j < data_string.length; j++) {
+        console.log('elementId: ' + elementId + ', data_array[i][1] = ' + data_array[i][1]);
+        for (let j = 1; j < data_string.length; j++) {
           teamdata[elementId][j] = data_array[i][j];
         }
       }
