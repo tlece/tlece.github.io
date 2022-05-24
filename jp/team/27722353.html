@@ -53,7 +53,7 @@
   </script>
 
   <script>
-    window.onload = function import_csv(csv_path) {
+    function import_csv(csv_path) {
       fetch(csv_path)
         .then((res) => {
           if (!res.ok) {
@@ -62,6 +62,7 @@
           return res.text();
         })
         .then((csv_data) => {
+          console.log('csv_data: '+csv_data);
           convert_array(csv_data);
         })
         .catch((error) => {
