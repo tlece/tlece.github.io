@@ -54,6 +54,7 @@
 
   <script>
     let data_array = [];
+
     function import_csv(csv_path) {
       fetch(csv_path)
         .then((res) => {
@@ -71,28 +72,22 @@
     }
 
     function convert_array(csv_data) {
-      
+
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
         console.log('elementId: ' + elementId + ', data_array[i][1] = ' + data_array[i][1]);
-        for (let j = 1; j < data_array[i].length; j++) {
-          console.log('i='+i+' j='+j+' data_array[i][j]='+data_array[i][j]);
+        for (let j = 0; j < data_array[i].length; j++) {
+          console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + data_array[i][j]);
         }
       }
     }
 
     import_csv('https://www.tlece.com/teamdata2.csv')
 
-    /*
-    for (let i = 1; i < teamdata[27722353].length; i++) {
-          console.log('teamdata[27722353]['+i+']='+teamdata[27722353][i]);
-        }
-        */
-        console.log(data_array[0][0]);
-
+    console.log(data_array[0][0]);
   </script>
 
 </head>
@@ -131,7 +126,7 @@
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  Name: 
+                  Name:
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
