@@ -53,7 +53,7 @@
   </script>
 
   <script>
-    function import_csv(csv_path) {
+    window.onload = function import_csv(csv_path) {
       fetch(csv_path)
         .then((res) => {
           if (!res.ok) {
