@@ -53,6 +53,7 @@
   </script>
 
   <script>
+    let teamdata = [];
     function import_csv(csv_path) {
       fetch(csv_path)
         .then((res) => {
@@ -65,7 +66,7 @@
           convert_array(csv_data);
         })
         .catch((error) => {
-          console.log('Error happened: '+error);
+          console.log('Error happened: ' + error);
         })
     }
 
@@ -74,10 +75,12 @@
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
-        console.log(i+' = '+data_string[i].split(','));
+        console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
-        console.log('getElementById['+elementId+'_name].value = '+data_array[i][1]);
-        document.getElementById(elementId).innerHTML = data_array[i][1];
+        console.log('getElementById[' + elementId + '_name].value = ' + data_array[i][1]);
+        for (let j = 0; j < data_string.length; j++) {
+          teamdata[elementId][j] = data_array[i][j];
+        }
       }
     }
 
@@ -120,7 +123,7 @@
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  Name: <p id="27722353_name"></p>
+                  Name: <script>document.write(teamdata[27722353][1])</script>>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
