@@ -58,9 +58,9 @@
     window.x = window.x || [];
     window.y = window.y || [];
 */
-var data_array = window || global;
-var x = window || global;
-var y = window || global;
+var data_array;
+var x;
+var y;
 
     function import_csv(csv_path) {
       fetch(csv_path)
@@ -95,7 +95,7 @@ var y = window || global;
 
     import_csv('https://www.tlece.com/teamdata2.csv')
 
-    console.log('x=' + x + ' y=' + y);
+    console.log('x=' + window.x + ' y=' + window.y);
     for (let i = 0; i < x; i++) {
       for (let j = 0; j < y; j++) {
         console.log('i=' + i + ' j=' + j + ' global.data_array[i][j]=' + data_array[i][j]);
