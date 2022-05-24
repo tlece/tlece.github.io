@@ -53,10 +53,14 @@
   </script>
 
   <script>
-
+/*
     window.data_array = window.data_array || [];
     window.x = window.x || [];
     window.y = window.y || [];
+*/
+var data_array = window || global;
+var x = window || global;
+var y = window || global;
 
     function import_csv(csv_path) {
       fetch(csv_path)
