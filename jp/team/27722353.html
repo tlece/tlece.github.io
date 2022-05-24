@@ -54,8 +54,9 @@
 
   <script>
 
-    global.data_array = [];
-    global.x, global.y;
+    window.data_array = window.data_array || [];
+    window.x = window.x || [];
+    window.y = windows.y || [];
 
     function import_csv(csv_path) {
       fetch(csv_path)
@@ -77,23 +78,23 @@
 
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
-        global.data_array[i] = data_string[i].split(',');
+        data_array[i] = data_string[i].split(',');
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
         for (let j = 0; j < data_array[i].length; j++) {
-          console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + global.data_array[i][j]);
-          global.y++;
+          console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + data_array[i][j]);
+          y++;
         }
-        global.x++;
+        x++;
       }
     }
 
     import_csv('https://www.tlece.com/teamdata2.csv')
 
-    console.log('x=' + global.x + ' y=' + global.y);
-    for (let i = 0; i < global.x; i++) {
-      for (let j = 0; j < global.y; j++) {
-        console.log('i=' + i + ' j=' + j + ' global.data_array[i][j]=' + global.data_array[i][j]);
+    console.log('x=' + x + ' y=' + y);
+    for (let i = 0; i < x; i++) {
+      for (let j = 0; j < y; j++) {
+        console.log('i=' + i + ' j=' + j + ' global.data_array[i][j]=' + data_array[i][j]);
       }
     }
   </script>
