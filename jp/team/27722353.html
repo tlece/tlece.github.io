@@ -83,24 +83,28 @@ var y;
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
         data_array[i] = data_string[i].split(',');
+        document.getElementById("name").innerHTML = data_array[i][1]
+
+
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
         for (let j = 0; j < data_array[i].length; j++) {
           console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + data_array[i][j]);
-          y++;
         }
-        x++;
       }
     }
 
     import_csv('https://www.tlece.com/teamdata2.csv')
 
+    /*
     console.log('x=' + x + ' y=' + y);
     for (let i = 0; i < x; i++) {
       for (let j = 0; j < y; j++) {
         console.log('i=' + i + ' j=' + j + ' global.data_array[i][j]=' + data_array[i][j]);
       }
     }
+    */
+
   </script>
 
 </head>
@@ -139,7 +143,7 @@ var y;
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  Name: 
+                  Name: <p id="name"></p>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
