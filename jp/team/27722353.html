@@ -54,6 +54,7 @@
 
   <script>
     window.data_array = [];
+    window.x, window.y;
 
     function import_csv(csv_path) {
       fetch(csv_path)
@@ -80,13 +81,20 @@
         elementId = data_array[i][0];
         for (let j = 0; j < data_array[i].length; j++) {
           console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + data_array[i][j]);
+          window.y++;
         }
+        window.x++;
       }
     }
 
     import_csv('https://www.tlece.com/teamdata2.csv')
 
-    console.log('window.data_array[0]='+window.data_array[0]);
+    for (let i = 0; i < window.x; i++) {
+        for (let j = 0; j < window.y; j++) {
+          console.log('i=' + i + ' j=' + j + ' window.data_array[i][j]=' + window.data_array[i][j]);
+        }
+      }
+        
   </script>
 
 </head>
