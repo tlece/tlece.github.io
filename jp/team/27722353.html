@@ -53,7 +53,7 @@
   </script>
 
   <script>
-    var data_array = [];
+    //var data_array = [];
 
     function import_csv(csv_path) {
       fetch(csv_path)
@@ -75,7 +75,7 @@
 
       const data_string = csv_data.split('\n');
       for (let i = 0; i < data_string.length; i++) {
-        data_array[i] = data_string[i].split(',');
+        windows.data_array[i] = data_string[i].split(',');
         console.log(i + ' = ' + data_string[i].split(','));
         elementId = data_array[i][0];
         for (let j = 0; j < data_array[i].length; j++) {
