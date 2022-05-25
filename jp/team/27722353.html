@@ -52,59 +52,6 @@
     gtag('config', 'G-X325CYY2MT');
   </script>
 
-  <script>
-/*
-    window.data_array = window.data_array || [];
-    window.x = window.x || [];
-    window.y = window.y || [];
-*/
-var data_array;
-
-    function import_csv(csv_path) {
-      fetch(csv_path)
-        .then((res) => {
-          if (!res.ok) {
-            console.log('The request could not be properly processed');
-          }
-          return res.text();
-        })
-        .then((csv_data) => {
-          convert_array(csv_data);
-        })
-        .catch((error) => {
-          console.log('Error happened: ' + error);
-        })
-    }
-
-    function convert_array(csv_data) {
-
-      const data_string = csv_data.split('\n');
-      for (let i = 0; i < data_string.length; i++) {
-        data_array[i] = data_string[i].split(',');
-        //document.getElementById("name").innerHTML = data_array[i][5];
-
-
-        console.log(i + ' = ' + data_string[i].split(','));
-
-        for (let j = 0; j < data_array[i].length; j++) {
-          console.log('i=' + i + ' j=' + j + ' data_array[i][j]=' + data_array[i][j]);
-        }
-      }
-    }
-
-    import_csv('https://www.tlece.com/teamdata2.csv')
-
-    /*
-    console.log('x=' + x + ' y=' + y);
-    for (let i = 0; i < x; i++) {
-      for (let j = 0; j < y; j++) {
-        console.log('i=' + i + ' j=' + j + ' global.data_array[i][j]=' + data_array[i][j]);
-      }
-    }
-    */
-
-  </script>
-
 </head>
 
 <body>
@@ -141,7 +88,6 @@ var data_array;
               <tr style="white-space: nowrap;">
                 <th colspan="2" style="text-align:center; ">
                   <h3><img src="../../img/asiboro.png" style="height:4em;"><br>シボロ・アーノルド</h3>
-                  Name: <p id="name"></p>
                 </th>
               </tr>
               <tr style="white-space: nowrap;">
