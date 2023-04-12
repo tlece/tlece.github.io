@@ -270,44 +270,43 @@ var fvSlider = new Swiper('.js-fvSlider', {
     el: '.swiper-pagination',
     clickable: true
   }
-}); // /**
-//  * @see https://www.globalride.io/en/
-//  */
-// //google map
-// google.maps.event.addDomListener(window, "load", initMap);
-// function initMap() {
-//   var latlng_tokyo = new google.maps.LatLng(35.6815558, 139.7601572);//中心の緯度, 経度
-//   var latlng_bang = new google.maps.LatLng(23.7703281, 90.3453244);//中心の緯度, 経度
-//   var latlng_NY = new google.maps.LatLng(40.7607986, -73.9743371);//中心の緯度, 経度
-//   var map_tokyo = new google.maps.Map(document.getElementById('map-tokyo'), {
-//     zoom: 14,//ズームの調整
-//     center: latlng_tokyo//上で設定した中心
-//   });
-//   var map_bangladesh = new google.maps.Map(document.getElementById('map-bangladesh'), {
-//     zoom: 14,//ズームの調整
-//     center: latlng_bang//上で設定した中心
-//   });
-//   var map_NY = new google.maps.Map(document.getElementById('map-ny'), {
-//     zoom: 14,//ズームの調整
-//     center: latlng_NY//上で設定した中心
-//   });
-//   //マーカーの設定
-//   var marker_tokyo = new google.maps.Marker({
-//     position: latlng_tokyo,
-//     map: map_tokyo,
-//     icon: '/assets/img/common/icon_pin_1.svg'//ここを追加
-//   });
-//   var marker_bang = new google.maps.Marker({
-//     position: latlng_bang,
-//     map: map_bangladesh,
-//     icon: '/assets/img/common/icon_pin_1.svg'//ここを追加
-//   });
-//   var marker_NY = new google.maps.Marker({
-//     position: latlng_NY,
-//     map: map_NY,
-//     icon: '/assets/img/common/icon_pin_1.svg'//ここを追加
-//   });
-// }
+});
+
+//google map
+google.maps.event.addDomListener(window, "load", initMap);
+function initMap() {
+  var latlng_tokyo = new google.maps.LatLng(35.6815558, 139.7601572);//中心の緯度, 経度
+  var latlng_bang = new google.maps.LatLng(23.7703281, 90.3453244);//中心の緯度, 経度
+  var latlng_NY = new google.maps.LatLng(40.7607986, -73.9743371);//中心の緯度, 経度
+  var map_tokyo = new google.maps.Map(document.getElementById('map-tokyo'), {
+    zoom: 14,//ズームの調整
+    center: latlng_tokyo//上で設定した中心
+  });
+  var map_bangladesh = new google.maps.Map(document.getElementById('map-bangladesh'), {
+    zoom: 14,//ズームの調整
+    center: latlng_bang//上で設定した中心
+  });
+  var map_NY = new google.maps.Map(document.getElementById('map-ny'), {
+    zoom: 14,//ズームの調整
+    center: latlng_NY//上で設定した中心
+  });
+  //マーカーの設定
+  var marker_tokyo = new google.maps.Marker({
+    position: latlng_tokyo,
+    map: map_tokyo,
+    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+  });
+  var marker_bang = new google.maps.Marker({
+    position: latlng_bang,
+    map: map_bangladesh,
+    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+  });
+  var marker_NY = new google.maps.Marker({
+    position: latlng_NY,
+    map: map_NY,
+    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+  });
+}
 
 var tl = gsap.timeline();
 tl.to('.js-fv, .js-header', {
