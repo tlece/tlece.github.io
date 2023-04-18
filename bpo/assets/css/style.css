@@ -1019,7 +1019,7 @@ select:not(:disabled) {
 }
 
 .p-header__logo img,
-.p-header__logo source {
+.p-header__logo svg {
   width: auto;
   height: inherit;
   object-fit: contain;
