@@ -294,17 +294,20 @@ function initMap() {
   var marker_tokyo = new google.maps.Marker({
     position: latlng_tokyo,
     map: map_tokyo,
-    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+    icon: '/bpo/assets/img/common/icon_pin_1.svg',
+    scaledSize: new google.maps.Size(50, 50)
   });
   var marker_bang = new google.maps.Marker({
     position: latlng_bang,
     map: map_bangladesh,
-    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+    icon: '/bpo/assets/img/common/icon_pin_1.svg',
+    scaledSize: new google.maps.Size(50, 50)
   });
   var marker_NY = new google.maps.Marker({
     position: latlng_NY,
     map: map_NY,
-    icon: '/bpo/assets/img/common/icon_pin_1.svg'
+    icon: '/bpo/assets/img/common/icon_pin_1.svg',
+    scaledSize: new google.maps.Size(50, 50)
   });
 }
 
