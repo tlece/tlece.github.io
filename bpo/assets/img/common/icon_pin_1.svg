@@ -1,1 +1,21 @@
-<svg width="307" height="470" viewBox="0 0 307 470" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M154.319.613c84.004.517 152.049 68.858 152.049 153.008 0 2.069-.073 4.212-.147 6.28.074.148.147.37.147.518 0 98.41-140.967 197.115-140.967 283.926v13.151c0 6.649-5.394 12.042-12.043 12.042-6.649 0-12.043-5.393-12.043-12.042v-13.151C141.315 357.534.348 258.829.348 160.419c0-.148.073-.37.147-.518-.074-2.068-.147-4.211-.147-6.28C.348 69.175 68.91.613 153.358.613h.961z" fill="url(#paint0_linear_1_5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M153.314 64.377c51.545 0 93.333 41.787 93.333 93.332 0 51.545-41.788 93.331-93.333 93.331-51.546 0-93.333-41.786-93.333-93.331s41.866-93.332 93.333-93.332zm0 29.904c35.019 0 63.429 28.409 63.429 63.428s-28.41 63.427-63.429 63.427c-35.02 0-63.429-28.408-63.429-63.427s28.409-63.428 63.429-63.428z" fill="#fff"/><defs><linearGradient id="paint0_linear_1_5" x1="153.369" y1="540.449" x2="153.369" y2="188.692" gradientUnits="userSpaceOnUse"><stop stop-color="#80C6E4"/><stop offset="1" stop-color="#C5D562"/></linearGradient></defs></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 33.6 51.5" style="enable-background:new 0 0 33.6 51.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="16.7931" y1="-114.9012" x2="16.7931" y2="-77.3945" gradientTransform="matrix(1 0 0 -1 0 -56.6076)">
+		<stop  offset="0" style="stop-color:#80C6E4"/>
+		<stop  offset="1" style="stop-color:#C5D562"/>
+	</linearGradient>
+	<path class="st0" d="M16.9,0.7c9,0.1,16.2,7.3,16.2,16.3c0,0.2,0,0.4,0,0.7c0,0,0,0,0,0.1c0,10.5-15,21-15,30.3v1.4
+		c0,0.7-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3V48c0-9.3-15-19.8-15-30.3c0,0,0,0,0-0.1c0-0.2,0-0.4,0-0.7c0-9,7.3-16.3,16.3-16.3H16.9z"
+		/>
+	<path class="st1" d="M16.8,7.5c5.5,0,10,4.5,10,10s-4.5,10-10,10c-5.5,0-10-4.5-10-10S11.3,7.5,16.8,7.5L16.8,7.5z M16.8,10.7
+		c3.7,0,6.8,3,6.8,6.8s-3,6.8-6.8,6.8c-3.7,0-6.8-3-6.8-6.8S13.1,10.7,16.8,10.7z"/>
+</g>
+</svg>
