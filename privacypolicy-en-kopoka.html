@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1272077476225642');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1272077476225642&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1272077476225642');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1272077476225642&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,30 +51,31 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X325CYY2MT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-X325CYY2MT');
-  </script>
-  
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X325CYY2MT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-X325CYY2MT');
+    </script>
+
 </head>
+
 <body id="page-top">
 
-<!-- Facebook's tracking event -->
-<script>
-  fbq('track', 'ViewContent', {
-    value: 2,
-  });
-</script>
-    
-<div class="navbar-wrapper">
+    <!-- Facebook's tracking event -->
+    <script>
+        fbq('track', 'ViewContent', {
+            value: 2,
+        });
+    </script>
+
+    <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-            <!--
+                <!--
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -89,51 +93,51 @@
                 </div>
             </div>
         </nav>
-</div>
+    </div>
 
 
 
-<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-<!--
+    <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+        <!--
     <ol class="carousel-indicators">
         <li data-target="#inSlider" data-slide-to="0" class="active"></li>
         <li data-target="#inSlider" data-slide-to="1"></li>
     </ol>
     -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Privacy Policy<br/></h1>
-                    <!--
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Privacy Policy<br /></h1>
+                        <!--
                     <p>
                         <a class="btn btn-lg btn-primary" href="#" role="button">Lebih Lanjut</a>
                     </p>
                     -->
-                </div>
-                <!--
+                    </div>
+                    <!--
                 <div class="carousel-image wow zoomIn">
                     <img src="img/laptop.png" alt="laptop"/>
                 </div>
                 -->
+                </div>
+                <!-- Set background for slide in css -->
+                <div class="header-back one"></div>
+
             </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back one"></div>
-
         </div>
+        <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
 
 
-<!--
+    <!--
 <section class="container services">
     <div class="row">
         <div class="col-sm-3">
@@ -160,81 +164,104 @@
 </section>
 -->
 
-<section  id="features" class="container features">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>Privacy Policy</h1>
-            <p>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+    <section id="features" class="container features">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Privacy Policy</h1>
+                <p>This page is used to inform website visitors regarding our policies with the collection, use, and
+                    disclosure of Personal Information if anyone decided to use our Service.
 
-If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+                    If you choose to use our Service, then you agree to the collection and use of information in
+                    relation to this policy. The Personal Information that we collect is used for providing and
+                    improving the Service. We will not use or share your information with anyone except as described in
+                    this Privacy Policy.
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Kopoka unless otherwise defined in this Privacy Policy. </p>
+                    The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which
+                    is accessible at Kopoka unless otherwise defined in this Privacy Policy. </p>
+            </div>
         </div>
-    </div>
-    <div class="row features-block">
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Information Collection and Use</h2>
-            <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request is will be retained by us and used as described in this privacy policy.
-The app does use third party services that may collect information used to identify you.</p>
-            <!--<a href="" class="btn btn-primary">Learn more</a>-->
+        <div class="row features-block">
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Information Collection and Use</h2>
+                <p>For a better experience, while using our Service, we may require you to provide us with certain
+                    personally identifiable information. The information that we request is will be retained by us and
+                    used as described in this privacy policy.
+                    The app does use third party services that may collect information used to identify you.</p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Log Data</h2>
+                <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect
+                    data and information (through third party products) on your phone called Log Data. This Log Data may
+                    include information such as your device Internet Protocol (“IP”) address, device name, operating
+                    system version, the configuration of the app when utilizing our Service, the time and date of your
+                    use of the Service, and other statistics. </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Service Providers</h2>
+                <p> We may employ third-party companies and individuals due to the following reasons:</p>
+
+                <li>To facilitate our Service;</li>
+                <li>To provide the Service on our behalf;</li>
+                <li>To perform Service-related services; or</li>
+                <li>To assist us in analyzing how our Service is used.</li>
+
+                <p>We want to inform users of this Service that these third parties have access to your Personal
+                    Information. The reason is to perform the tasks assigned to them on our behalf. However, they are
+                    obligated not to disclose or use the information for any other purpose. </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Security</h2>
+                <p>We value your trust in providing us your Personal Information, thus we are striving to use
+                    commercially acceptable means of protecting it. But remember that no method of transmission over the
+                    internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its
+                    absolute security. </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Links to Other Sites</h2>
+                <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally
+                    identifiable information from children under 13. In the case we discover that a child under 13 has
+                    provided us with personal information, we immediately delete this from our servers. If you are a
+                    parent or guardian and you are aware that your child has provided us with personal information,
+                    please contact us so that we will be able to do necessary actions. </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page
+                    periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on
+                    this page. These changes are effective immediately after they are posted on this page. </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <!--<small>More HR features</small>-->
+                <h2>Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
+                </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+
         </div>
+    </section>
 
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Log Data</h2>
-            <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics. </p>
-              <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Service Providers</h2>
-            <p> We may employ third-party companies and individuals due to the following reasons:</p>
-
-    <li>To facilitate our Service;</li>
-    <li>To provide the Service on our behalf;</li>
-    <li>To perform Service-related services; or</li>
-    <li>To assist us in analyzing how our Service is used.</li>
-
-<p>We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose. </p>
-            <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Security</h2>
-            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security. </p>
-              <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Links to Other Sites</h2>
-            <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions. </p>
-            <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page. </p>
-              <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <!--<small>More HR features</small>-->
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us. </p>
-              <!--<a href="" class="btn btn-primary">Learn more</a>-->
-        </div>
-
-    </div>
-</section>
-
-<!--    
+    <!--    
 <section id="team" class="gray-section team">
     <div class="container">
         <div class="row m-b-lg">
@@ -299,8 +326,8 @@ The app does use third party services that may collect information used to ident
     </div>
 </section>
 -->
-    
-<!--
+
+    <!--
 <section class="features">
     <div class="container">
         <div class="row">
@@ -332,7 +359,7 @@ The app does use third party services that may collect information used to ident
 </section>
 -->
 
-<!--
+    <!--
 <section class="timeline gray-section">
     <div class="container">
         <div class="row">
@@ -395,7 +422,7 @@ The app does use third party services that may collect information used to ident
 </section>
 -->
 
-<!--
+    <!--
 <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
 
     <div class="container">
@@ -418,7 +445,7 @@ The app does use third party services that may collect information used to ident
 </section>
 -->
 
-<!--
+    <!--
 <section class="comments gray-section" style="margin-top: 0">
     <div class="container">
         <div class="row">
@@ -488,7 +515,7 @@ The app does use third party services that may collect information used to ident
 </section>
 -->
 
-<!--
+    <!--
 <section class="features">
     <div class="container">
         <div class="row">
@@ -531,7 +558,7 @@ The app does use third party services that may collect information used to ident
 </section>
 -->
 
-<!--    
+    <!--    
 <section id="pricing" class="pricing">
     <div class="container">
         <div class="row m-b-lg">
@@ -650,17 +677,17 @@ The app does use third party services that may collect information used to ident
 
 </section>
 -->
-    
-<section id="contact" class="gray-section contact">
-    <div class="container">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Contact Us</h1>
-                <p>Get in touch with us via email, as well as via Facebook, Twitter or Instragram. </p>
+
+    <section id="contact" class="gray-section contact">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Contact Us</h1>
+                    <p>Get in touch with us via email, as well as via Facebook, Twitter or Instragram. </p>
+                </div>
             </div>
-        </div>
-        <!--
+            <!--
         <div class="row m-b-lg">
             <div class="col-lg-3 col-lg-offset-3">
                 <address>
@@ -677,53 +704,54 @@ The app does use third party services that may collect information used to ident
             </div>
         </div>
         -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <a href="mailto:test@email.com" class="btn btn-primary">Send mail</a>
-                <p class="m-t-sm">
-                    Or follow us on social platform
-                </p>
-                <ul class="list-inline social-icon">
-                    <li><a href="https://twitter.com/mykopoka"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li><a href="https://www.facebook.com/mykopoka"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/mykopoka/"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="mailto:test@email.com" class="btn btn-primary">Send mail</a>
+                    <p class="m-t-sm">
+                        Or follow us on social platform
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://twitter.com/mykopoka"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/mykopoka"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/mykopoka/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                    <p><strong>&copy; 2017 Kopoka</strong><br /> All rights reserved.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2017 Kopoka</strong><br/> All rights reserved.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/pace.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/cbpAnimatedHeader.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/inspinia.js"></script>
-    
-    
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5a13fd16198bd56b8c03c632/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    
-    
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/inspinia.js"></script>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5a13fd16198bd56b8c03c632/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
 </body>
+
 </html>
