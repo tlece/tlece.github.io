@@ -1,3 +1,38 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@s-suehiro 
+tlece
+/
+tlece.github.io
+Public
+Fork your own copy of tlece/tlece.github.io
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+4
+Insights
+Beta Try the new code view
+tlece.github.io/bpo/assets/js/script.js /
+@s-suehiro
+s-suehiro Update script.js
+Latest commit f3b8c33 last week
+ History
+ 2 contributors
+@s-suehiro@asiboro
+345 lines (290 sloc)  10.5 KB
+ 
+
 "use strict";
 
 // PCの場合True
@@ -276,7 +311,7 @@ var fvSlider = new Swiper('.js-fvSlider', {
 google.maps.event.addDomListener(window, "load", initMap);
 function initMap() {
   var latlng_tokyo = new google.maps.LatLng(35.6815558, 139.7601572);//中心の緯度, 経度
-  var latlng_bang = new google.maps.LatLng(23.7703281, 90.3453244);//中心の緯度, 経度
+  var latlng_bang = new google.maps.LatLng(23.821008, 90.367957);//中心の緯度, 経度
   var latlng_NY = new google.maps.LatLng(40.7607986, -73.9743371);//中心の緯度, 経度
   var map_tokyo = new google.maps.Map(document.getElementById('map-tokyo'), {
     zoom: 14,//ズームの調整
@@ -343,3 +378,18 @@ fadeInTargets.forEach(function (target) {
     }
   });
 });
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+tlece.github.io/script.js at master · tlece/tlece.github.io
