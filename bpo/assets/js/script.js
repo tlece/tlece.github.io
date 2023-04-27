@@ -1,38 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@s-suehiro 
-tlece
-/
-tlece.github.io
-Public
-Fork your own copy of tlece/tlece.github.io
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-4
-Insights
-Beta Try the new code view
-tlece.github.io/bpo/assets/js/script.js /
-@s-suehiro
-s-suehiro Update script.js
-Latest commit f3b8c33 last week
- History
- 2 contributors
-@s-suehiro@asiboro
-345 lines (290 sloc)  10.5 KB
- 
-
 "use strict";
 
 // PCの場合True
@@ -378,18 +343,3 @@ fadeInTargets.forEach(function (target) {
     }
   });
 });
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-tlece.github.io/script.js at master · tlece/tlece.github.io
