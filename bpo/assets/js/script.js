@@ -275,9 +275,9 @@ var fvSlider = new Swiper('.js-fvSlider', {
 //google map
 google.maps.event.addDomListener(window, "load", initMap);
 function initMap() {
-  var latlng_tokyo = new google.maps.LatLng(35.6815558, 139.7601572);//中心の緯度, 経度
+  var latlng_tokyo = new google.maps.LatLng(35.6816952, 139.7627750);//中心の緯度, 経度
   var latlng_bang = new google.maps.LatLng(23.821008, 90.367957);//中心の緯度, 経度
-  var latlng_NY = new google.maps.LatLng(40.7607986, -73.9743371);//中心の緯度, 経度
+  var latlng_NY = new google.maps.LatLng(40.7608986, -73.9717851);//中心の緯度, 経度
   var map_tokyo = new google.maps.Map(document.getElementById('map-tokyo'), {
     zoom: 14,//ズームの調整
     center: latlng_tokyo//上で設定した中心
