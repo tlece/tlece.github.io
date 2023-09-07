@@ -85,6 +85,14 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        FB.CustomerChat.show(true);  // Show the chat dialog after a delay        
+      }, 1000);
+    };
+  </script>
+
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container align-items-center">
@@ -121,14 +129,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    window.onload = function () {
-      setTimeout(function () {
-        FB.CustomerChat.show(true);  // Show the chat dialog after a delay        
-      }, 1000);  // 3000 milliseconds = 3 seconds
-    };
-  </script>
 
 </body>
 
